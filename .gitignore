@@ -1,5 +1,17 @@
+# Inherited
 .DS_Store
 .c9/
 tmp/
 output/
 node_modules/
+
+# Files
+$__StoryList.tid
+tiddlywiki.info_tmap
+/editions/master/users.csv
+
+# Directories
+/editions/neuro-temp
+/editions/master/tiddlers
+
+/plugins/felixhayashi/
