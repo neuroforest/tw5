@@ -34,9 +34,12 @@ exports.startup = function() {
 
 function setFavicon() {
 	var tiddler = $tw.wiki.getTiddler(FAVICON_TITLE);
+
 	if(tiddler) {
 		var faviconLink = document.getElementById("faviconLink");
-		faviconLink.setAttribute("href",$tw.utils.makeDataUri(tiddler.fields.text,tiddler.fields.type,tiddler.fields._canonical_uri));
+		if (faviconLink) {
+			faviconLink.setAttribute("href",$tw.utils.makeDataUri(tiddler.fields.text,tiddler.fields.type,tiddler.fields._canonical_uri));
+		}
 	}
 }
 
