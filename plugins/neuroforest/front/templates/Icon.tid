@@ -1,0 +1,8 @@
+title: $:/plugins/neuroforest/front/templates/Icon
+
+<$list filter="[all[current]has[img]]">
+  <div align=left>
+    <$image class="neuro-icon" source={{!!img}} height=32 wrap=false />
+    <div align="left" style="font-size:16px;line-height:1;">{{!!imgc}}</div>
+  </div>
+</$list>

@@ -1,0 +1,22 @@
+custom-sort: 11
+tags: $:/plugins/neuroforest/front/tags/NeuroBox
+title: $:/plugins/neuroforest/front/templates/LinkBar
+
+
+<tr class=neuro-icon-row style="border:none;">
+<$list filter="[all[shadows]tag[$:/plugins/neuroforest/front/tags/LinkBar]sort[custom-sort]]" variable="link">
+<$set name="keyword" tiddler=<<link>> field="neuro.keyword">
+<$list filter="[all[current]has<keyword>]">
+<$set name="url" tiddler=<<currentTiddler>> field=<<keyword>> >
+<td>
+<a href=<<url>> target="_blank" rel="noopener noreferrer" title=<<url>> >
+<$set name="image" tiddler=<<link>> field="neuro.icon">
+<$transclude tiddler=<<image>> />
+</$set>
+</a>
+</td>
+</$set>
+</$list>
+</$set>
+</$list>
+</tr>

@@ -1,0 +1,17 @@
+title: $:/plugins/neuroforest/front/templates/Bookmark
+
+
+<div class=nc-bookmark>
+
+<$link to={{!!title}}>{{!!name}}</$link>
+<div style="display:flex;align-items:stretch;">
+<div style="display:flex;">
+''PAGE'': <code>{{!!book.current-page}}</code>
+</div>
+<div style="flex-grow: 1;margin-left:10%;">
+<$hoelzro-progressbar current={{!!book.current-page}} total={{!!book.pages}} />
+</div>
+</div>
+''PARAGRAPH'': {{!!book.current-paragraph}}
+
+</div>

@@ -1,0 +1,26 @@
+title: $:/plugins/neuroforest/front/templates/Tree
+
+!!!''TREE''
+<div class="tc-table-of-contents nc-objects">
+	<$macrocall 
+		$name="toc-selective-expandable" 
+		tag=<<current>> 
+		sort="sort[title]sort[custom-sort]prefix<current>"
+	/>	
+</div>
+<div class="tc-table-of-contents nc-objects">
+	<$list filter="[tag<current>suffix[ Objects]]" variable="objects">
+		<$macrocall 
+			$name="toc-selective-expandable" 
+			tag=<<objects>> 
+			sort="sort[title]sort[custom-sort]"
+		/>
+	</$list>	
+</div>
+<div class="tc-table-of-contents nc-tree">
+	<$macrocall 
+		$name="toc-selective-expandable" 
+		tag=<<current>> 
+		sort="sort[title]sort[custom-sort]!suffix[ Objects]!prefix<current>"
+	/>
+</div>

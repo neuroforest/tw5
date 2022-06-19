@@ -1,0 +1,3 @@
+title: $:/plugins/neuroforest/front/tags/NeuroControls
+
+<$list filter="[all[shadows]tag<currentTiddler>]" />

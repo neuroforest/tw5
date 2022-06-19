@@ -1,0 +1,27 @@
+list-before: $:/plugins/tiddlywiki/comments/footer-view-template-segment
+tags: $:/tags/ViewTemplate
+title: $:/plugins/neuroforest/front/templates/Outline
+
+<$list filter="[all[current]search:neuro.role:literal[outline]]" variable="current">
+{{||$:/plugins/neuroforest/front/templates/Image}}
+<div style="padding-bottom:0.5em;">
+<tr style="display:table;width:100%;border:none;">
+<td style="padding:0;vertical-align:top;">
+
+{{||$:/plugins/neuroforest/front/templates/Tree}}
+</td><td style="width:5%;"></td><td style="width:50%;">
+<table style="border:none;">
+{{||$:/plugins/neuroforest/front/templates/LinkBar}}
+</table>
+<$list filter="[prefix[ENCODING]suffix<currentTiddler>limit[1]]">
+		
+!!!''ENCODING''
+<$scrollable class="nc-scrollable">
+					
+{{!!text}}
+</$scrollable>
+</$list>
+</td>
+</tr>
+</div>
+</$list>

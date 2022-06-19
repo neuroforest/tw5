@@ -1,0 +1,7 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/Commander
+type: text/css
+
+table.cmd-ci-table td.leftcol {
+  background-color: red;
+}

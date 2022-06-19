@@ -1,0 +1,14 @@
+title: $:/plugins/neuroforest/front/ui/EditorToolbar/Katex
+tags: $:/tags/EditorToolbar
+icon: $:/plugins/tiddlywiki/katex/katex-logo
+caption: katex
+condition: [<targetTiddler>!has[type]] [<targetTiddler>type[text/vnd.tiddlywiki]]
+description: enclose with `$$`
+shortcuts: ((katex))
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix="$$"
+	suffix="$$"
+/>

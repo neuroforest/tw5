@@ -1,0 +1,4 @@
+title: $:/config/EditorToolbarButtons/Visibility/$:
+
+/plugins/tiddlywiki/katex/ui/EditorToolbar/katex: hide
+/plugins/neuroforest/front/ui/EditorToolbar/Katex: show

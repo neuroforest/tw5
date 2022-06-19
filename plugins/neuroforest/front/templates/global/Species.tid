@@ -1,0 +1,22 @@
+list-before: $:/core/ui/ViewTemplate/body
+tags: $:/tags/ViewTemplate
+title: $:/plugins/neuroforest/front/templates/Species
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]prefix[.bt-s ]]">
+  <table class=nc-table-dark style="width:100%;">
+	<tr>
+	  <td align=center style="padding:0.8em 0.5em 0.5em 0.5em;">
+        <$image source={{!!img}} height=256px/>
+	  </td>
+	  <td align=left>
+	  	  <$link to={{!!bio.special}} />
+	  	  <br><br>
+	  	  {{||$:/plugins/neuroforest/front/templates/Translation}}
+	  </td>
+	  <td align=center>
+		{{||$:/plugins/neuroforest/front/templates/Taxonomy}}
+	  </td>
+	</tr>
+  </table>
+</$list>

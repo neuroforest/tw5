@@ -1,0 +1,17 @@
+title: $:/plugins/neuroforest/front/templates/Taxonomy
+
+<table class=nc-taxonomy>
+  <tr>
+    <td colspan=2 align=center>[[ORGANISMS]]</td>
+  </tr>
+  <$list filter="[all[current]!prefix[$:/]!prefix[Draft]neuro:taxon[]]">
+    <tr>
+      <td align=center>
+		<$macrocall $name="get-role-link" title=<<currentTiddler>> />
+      </td>
+	  <td align=center>
+	  	<$macrocall $name="get-link" title=<<currentTiddler>> />
+      </td>
+    </tr>
+  </$list>
+</table>

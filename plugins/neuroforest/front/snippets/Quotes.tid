@@ -1,0 +1,7 @@
+caption: NF Quotes
+tags: $:/tags/TextEditor/Snippet
+title: $:/plugins/neuroforest/front/snippets/Quotes
+
+!!!''Quotes''
+
+<$list filter="[prefix{!!title}search:title[ #Quote ]sort[title]]"/>

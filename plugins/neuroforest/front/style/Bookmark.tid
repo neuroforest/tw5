@@ -1,0 +1,11 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/Bookmark
+type: text/css
+
+div.nc-bookmark {
+    align:center;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 0px 25px 0px 25px;
+}

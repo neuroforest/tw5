@@ -1,0 +1,15 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/Katex
+type: text/css
+
+.katex {
+  color: #b3f2ef;
+  background-color: #2E3440;
+  padding: 0px 3px 2px 0px;
+  overflow: hidden;
+}
+
+.katex-html {
+    overflow-x: auto;
+    overflow-y: hidden;
+}

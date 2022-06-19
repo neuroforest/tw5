@@ -1,0 +1,13 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/SideBar
+type: text/css
+
+.tc-sidebar-scrollable input {
+    font-size: 22px;
+    border-radius: 4px;
+    margin-bottom: 9px;
+    padding-left: 4px;
+    width: 264px;
+    margin-right: 8px;
+    border: 2px solid white;
+}

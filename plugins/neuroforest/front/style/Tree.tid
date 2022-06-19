@@ -1,0 +1,13 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/Tree
+type: text/css
+
+.nc-tree {
+  line-height: 8px;
+  border-radius: 4px;
+  background-color: #2E3440;
+}
+
+.nc-objects {
+  background-color: #2E3440;
+}

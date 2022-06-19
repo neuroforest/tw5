@@ -1,0 +1,4 @@
+neuro.icon: $:/plugins/neuroforest/front/images/Location
+neuro.keyword: gmaps.url
+tags: $:/plugins/neuroforest/front/tags/LinkBar
+title: $:/plugins/neuroforest/front/links/Location

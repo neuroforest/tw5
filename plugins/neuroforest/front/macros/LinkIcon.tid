@@ -1,0 +1,16 @@
+tags: $:/tags/Macro
+title: $:/plugins/neuroforest/front/macros/link-icon
+
+\define link-icon(keyword)
+<$set name="current" value=<<currentTiddler>> >
+<$list filter="[all[shadows]tag[$:/plugins/neuroforest/front/tags/LinkBar]search:neuro.keyword[$keyword$]]" variable="link">
+<$set name="url" tiddler=<<current>> field=<<__keyword__>> >
+<a href=<<url>> target="_blank" rel="noopener noreferrer">
+<$set name="image" tiddler=<<link>> field="neuro.icon">
+<$transclude tiddler=<<image>> />
+</$set>
+</a>
+</$set>
+</$list>
+</$set>
+\end

@@ -1,0 +1,33 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/Enhance
+type: text/css
+
+div.nc-enhance {
+    background-color: #f4e0d7;
+    border-radius: 10px;
+    color: black;
+    display:inline-block;
+    line-height: 136%;
+    padding: 10px;
+    width: 100%;
+}
+
+div.nc-enhance a.tc-tiddlylink {
+	background-color: #2e3440;
+	border-radius: 4px;
+	padding: 2px;
+}
+
+div.nc-enhance a.tc-tiddlylink:hover {
+	background-color: white;
+	border-radius: 4px;
+	padding: 2px;
+}
+
+div.nc-enhance strong {
+	color: black;
+}
+
+div.nc-enhance th {
+	color: white;
+}

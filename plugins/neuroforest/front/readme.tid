@@ -1,0 +1,20 @@
+title: $:/plugins/neuroforest/front/readme
+
+Welcome to Neuroforest Front.
+
+├── images<br>
+├── links<br>
+├── macros<br>
+│   └── LinkIcon.tid<br>
+├── style<br>
+├── tags<br>
+│   ├── LinkBar.tid<br>
+│   └── NeuroBox.tid<br>
+├── templates<br>
+│   ├── components<br>
+│   ├── global<br>
+│   └── neurobox<br>
+├── tweaks<br>
+├── icon.tid<br>
+├── plugin.info<br>
+└── readme.tid

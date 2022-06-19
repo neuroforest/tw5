@@ -1,0 +1,5 @@
+custom-sort: 6
+neuro.icon: $:/plugins/neuroforest/front/images/Book
+neuro.target: .sh Journal
+tags: $:/plugins/neuroforest/front/tags/NeuroControls
+title: $:/plugins/neuroforest/front/links/Book

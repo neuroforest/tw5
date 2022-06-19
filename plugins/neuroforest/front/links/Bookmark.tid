@@ -1,0 +1,5 @@
+custom-sort: 4
+neuro.icon: $:/plugins/neuroforest/front/images/Bookmark
+neuro.target: BOOKMARKS
+tags: $:/plugins/neuroforest/front/tags/NeuroControls
+title: $:/plugins/neuroforest/front/links/Bookmark

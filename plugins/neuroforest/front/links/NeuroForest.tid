@@ -1,0 +1,5 @@
+custom-sort: 11
+neuro.icon: $:/plugins/neuroforest/front/images/NeuroForestCentral
+neuro.target: NEUROFOREST
+tags: $:/plugins/neuroforest/front/tags/NeuroControls
+title: $:/plugins/neuroforest/front/links/NeuroForest

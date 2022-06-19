@@ -1,0 +1,7 @@
+title: $:/plugins/neuroforest/front/templates/Essay
+
+<$list filter="[prefix<currentTiddler>search:title[#]sort[custom-sort]]">
+
+!!''{{!!name}}'' <$link to={{!!title}}>{{$:/core/images/open-window}}</$link>
+
+</$list>

@@ -1,0 +1,12 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/Contents
+type: text/css
+
+.nc-page-controls svg {
+  height:32px;
+  width:32px;
+}
+
+.nc-page-controls a:hover {
+  text-decoration:none;
+}

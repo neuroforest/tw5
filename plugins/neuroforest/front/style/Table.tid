@@ -1,0 +1,54 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/Table
+type: text/css
+
+.nc-link-table {
+    background-color: #f4e0d7;
+}
+
+.nc-link-table strong {
+    color: black;
+}
+
+.nc-link-table td {
+    text-align: center;
+    color: black;
+}
+
+.nc-link-table tr {
+	height: 39px;
+}
+
+.nc-table a {
+    padding: none;
+    border: none;
+}
+
+.nc-table td, .nc-table-dark td {
+    height: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.nc-table th, .nc-table-dark th {
+    height: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.nc-table-dark {
+    background-color: #2e3440;
+}
+
+.nc-table-raw {
+    border: none;
+    width: 100%;
+}
+
+.nc-table-raw td {
+    border: none;
+}

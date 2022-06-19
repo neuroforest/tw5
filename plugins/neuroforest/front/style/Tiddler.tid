@@ -1,0 +1,53 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/Tiddler
+type: text/css
+
+.tc-tiddler-frame {
+  border-radius: 10px;
+  padding: 1.5em 1.5em 0.5em 1.5em;
+  border: 2px solid white;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+.tc-quote {
+  border-left: 5px solid #feffd5;
+}
+
+.tc-tiddler-controls button svg {
+  fill: #d7dde9;
+}
+
+.tc-tiddler-body {
+    overflow: hidden;
+}
+
+.tc-tiddler-info {
+    border: solid white 1px;
+    border-radius: 8px;
+    margin: 5px 0px 10px 0px;
+    padding: 8px 16px 8px 16px;
+    width: 100%;
+}
+
+.tc-view-field-table {
+    width: 100%;
+}
+
+.tc-view-field-table > tbody > tr > :nth-child(2) {
+    overflow-wrap: anywhere;
+}
+
+div.tc-tiddler-edit-frame .tc-edit {
+    color: white;
+}
+
+div.tc-edit-add-tag button {
+    margin: 0px 4px 0px 4px;
+}
+
+div.tc-tags-wrapper {
+    margin-bottom: 0px;
+}

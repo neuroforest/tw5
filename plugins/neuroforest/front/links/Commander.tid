@@ -1,0 +1,5 @@
+custom-sort: 1
+neuro.icon: $:/plugins/neuroforest/front/images/Commander
+neuro.target: $:/Commander
+tags: $:/plugins/neuroforest/front/tags/NeuroControls
+title: $:/plugins/neuroforest/front/links/Commander

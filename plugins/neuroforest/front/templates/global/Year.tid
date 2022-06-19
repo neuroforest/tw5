@@ -1,0 +1,14 @@
+list-before: $:/plugins/tiddlywiki/comments/footer-view-template-segment
+tags: $:/tags/ViewTemplate
+title: $:/plugins/neuroforest/front/templates/Year
+
+<$list filter="[all[current]prefix[Year ]]" variable="current">
+	<div class="nc-enhance">
+		Releted to: ''<$count tag filter="[all[current]backlinks[]]"/>''
+	</div>
+	<$scrollable class="nc-scrollable">
+	
+		<$list filter="[all[current]backlinks[]]" />
+		
+	</$scrollable>
+</$list>

@@ -1,0 +1,11 @@
+list-before: $:/core/ui/ViewTemplate/body
+title: $:/plugins/neuroforest/front/templates/Katex
+
+<$list filter="[all[current]prefix[.cl-zk-]]">
+<div style="padding-bottom:1em;"><code>{{!!sci.katex}}</code> renders as <$latex text={{!!sci.katex}} />
+</div>
+</$list>
+
+<$list filter="[all[current]has[sci.katex]!prefix[.cl-zk-]]">
+[[Chemical formula|Chemical Formula]]: {{!!sci.katex}}
+</$list>

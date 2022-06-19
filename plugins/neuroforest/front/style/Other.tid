@@ -1,0 +1,11 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/Other
+type: text/css
+
+.tc-drop-down {
+  border: 2px solid white;
+}
+
+div.tc-search svg {
+  fill: #d7dde9;
+}

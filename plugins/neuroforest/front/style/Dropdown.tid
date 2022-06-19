@@ -1,0 +1,11 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/Dropdown
+type: text/css
+
+.tc-block-dropdown .tc-dropdown-item {
+    color: white;
+}
+
+.tc-page-controls .tc-drop-down {
+    font-size: 1.5rem;
+}

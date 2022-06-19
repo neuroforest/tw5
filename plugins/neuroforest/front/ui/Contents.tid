@@ -1,0 +1,9 @@
+caption: Contents
+tags: $:/tags/SideBar
+title: $:/plugins/neuroforest/front/ui/Contents
+
+{{$:/plugins/neuroforest/front/ui/NeuroControls}}
+
+<div class="tc-table-of-contents">
+<<toc-selective-expandable "$:/plugins/neuroforest/front/tags/Contents" "sort[title]sort[custom-sort]">>
+</div>

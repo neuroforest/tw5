@@ -1,0 +1,13 @@
+title: $:/plugins/neuroforest/front/ui/NeuroControls
+
+<tr class="nc-page-controls" style="border:none;">
+<$list filter="[all[shadows]tag[$:/plugins/neuroforest/front/tags/NeuroControls]sort[custom-sort]]" variable="link">
+<$set name="target" tiddler=<<link>> field="neuro.target">
+<$link to=<<target>> tooltip=<<target>> >
+<$set name="img" field="neuro.icon" tiddler=<<link>> >
+<$transclude tiddler=<<img>> />
+</$set>
+</$link>
+</$set>
+</$list>
+</tr>

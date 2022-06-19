@@ -1,0 +1,2 @@
+list: $:/plugins/neuroforest/front/ui/Contents $:/core/ui/SideBar/Open $:/core/ui/SideBar/Recent $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More
+title: $:/tags/SideBar

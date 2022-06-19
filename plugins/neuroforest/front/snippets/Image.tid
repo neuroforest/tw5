@@ -1,0 +1,5 @@
+caption: NF Image
+tags: $:/tags/TextEditor/Snippet
+title: $:/plugins/neuroforest/front/snippets/Image
+
+<div style="width:60%">[img[]]</div>

@@ -1,0 +1,5 @@
+custom-sort: 01
+neuro.icon: $:/core/images/globe
+neuro.keyword: web
+tags: $:/plugins/neuroforest/front/tags/LinkBar
+title: $:/plugins/neuroforest/front/links/Web

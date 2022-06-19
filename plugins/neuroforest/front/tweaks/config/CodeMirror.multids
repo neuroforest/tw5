@@ -1,0 +1,7 @@
+title: $:/config/codemirror
+
+/autoCloseTags: true
+/indentUnit: 4
+/lineNumbers: true
+/tabSize: 4
+/theme: tiddlywiki

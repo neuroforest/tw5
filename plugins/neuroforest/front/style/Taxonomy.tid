@@ -1,0 +1,8 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/Taxonomy
+type: text/css
+
+.nc-taxonomy a {
+  padding: none;
+  border: none;
+}

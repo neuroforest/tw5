@@ -1,0 +1,5 @@
+custom-sort: 5
+neuro.icon: $:/plugins/neuroforest/front/images/Wikipedia
+neuro.target: .mWiki
+tags: $:/plugins/neuroforest/front/tags/NeuroControls
+title: $:/plugins/neuroforest/front/links/Mwiki

@@ -1,0 +1,14 @@
+caption: NF List
+tags: $:/tags/TextEditor/Snippet
+title: $:/plugins/neuroforest/front/snippets/List
+
+<$set name="filter" value="[all[current]]" >
+    <div class="nc-enhance">
+        Number of elements: ''<$count tag filter=<<filter>> />''
+    </div>
+    <$scrollable class="nc-scrollable">
+
+        <$list filter=<<filter>> />
+
+    </$scrollable>
+</$set>
