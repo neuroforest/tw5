@@ -22,6 +22,13 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <$transclude tiddler={{!!icon}}>
 <$transclude tiddler={{$:/config/DefaultTiddlerIcon}}/>
 </$transclude>
+&nbsp;
+</span>
+</$list>
+<$list filter="[all[current]has[neuro.icon]]">
+<span class="nc-tiddler-title-icon">
+<$image source={{!!neuro.icon}} />
+&nbsp;
 </span>
 </$list>
 </$set>

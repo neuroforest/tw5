@@ -3,5 +3,5 @@ tags: $:/plugins/neuroforest/front/tags/NeuroBox
 title: $:/plugins/neuroforest/front/templates/Translation
 
 <$list filter="[all[current]fields[]prefix[trans.]]" variable=trans>
-  <$macrocall $name=resolve-keyword keyword=<<trans>> />: //<$macrocall $name="field-value" tiddler=<<currentTiddler>> field=<<trans>> />//<br>
+  <$macrocall $name=resolve-keyword keyword=<<trans>> />: <$macrocall $name="field-value" tiddler=<<currentTiddler>> field=<<trans>> /><br>
 </$list>

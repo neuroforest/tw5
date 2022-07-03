@@ -10,17 +10,24 @@ title: $:/plugins/neuroforest/front/templates/Outline
 
 {{||$:/plugins/neuroforest/front/templates/Tree}}
 </td><td style="width:5%;"></td><td style="width:50%;">
-<table style="border:none;">
+<table style="border:none;margin:0;">
+<tr></tr>
 {{||$:/plugins/neuroforest/front/templates/LinkBar}}
 </table>
-<$list filter="[prefix[ENCODING]suffix<currentTiddler>limit[1]]">
-		
-!!!''ENCODING''
+
+<h3>''ENCODING''</h3>
+
 <$scrollable class="nc-scrollable">
-					
-{{!!text}}
-</$scrollable>
+<table class="nc-table-raw">
+<$list filter="[all[current]get[encoding]removesuffix[`]]" variable="prefix">
+<$list filter="[has[encoding]search:encoding<prefix>sort[encoding]lsort[encoding]]">
+<tr><td>
+{{!!encoding}}
+</td><td><$link to={{!!title}} /></td></tr>
 </$list>
+</$list>
+</table>
+</$scrollable>
 </td>
 </tr>
 </div>

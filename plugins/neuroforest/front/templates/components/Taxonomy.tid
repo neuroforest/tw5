@@ -1,6 +1,6 @@
 title: $:/plugins/neuroforest/front/templates/Taxonomy
 
-<table class=nc-taxonomy>
+<table class=nc-taxonomy align=center>
   <tr>
     <td colspan=2 align=center>[[ORGANISMS]]</td>
   </tr>

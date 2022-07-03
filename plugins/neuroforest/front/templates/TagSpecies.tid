@@ -1,0 +1,15 @@
+title: $:/plugins/neuroforest/front/templates/TagSpecies
+
+<$set name="filter" value="[prefix[.bt-s ]tag<currentTiddler>]" >
+  <div class="nc-enhance">
+    Number of [[species|.bt Species]]: ''<$count tag filter=<<filter>> />''
+  </div>
+  <$scrollable class="nc-scrollable">
+    <table class="nc-table" style="width:100%">
+    <$list filter=<<filter>>>
+		  <$macrocall $name="get-name" title={{!!title}} />
+		  <tr><td><$link to={{!!title}}>{{!!name}}</$link></td><td>{{!!trans.slv}}</td><td>{{!!trans.eng}}</td></tr>
+		</$list>
+    </table>
+  </$scrollable>
+</$set>

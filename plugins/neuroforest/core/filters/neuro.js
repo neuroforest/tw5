@@ -51,17 +51,41 @@ function getTaxonChain(title) {
 	}
 }
 
+function isRoot(tiddler, title, root) {
+  if (title === root) {
+    return true;
+  } else if (title === "$:/plugins/neuroforest/front/tags/Contents") {
+    return false;
+  } else {
+    var primary = $tw.utils.getPrimary(tiddler);
+    if (! primary) {
+      return false;
+    } else if (primary === root) {
+      return true;
+    } else {
+      var primaryTiddler = $tw.wiki.getTiddler(primary);
+      return isRoot(primaryTiddler, primary, root);
+    }
+  }
+}
+
 exports.neuro = function(source, operator, options) {
 	var results = [];
 	var unsorted = [];
-	if(operator.suffix === "taxon") { 
+	if (operator.suffix === "taxon") {
 		// Get organism to ORGANISM tiddler array
-		source(function(tiddler,title) {
+		source(function(tiddler, title) {
 			var taxonChain = getTaxonChain(title).reverse();
 			results.push(...taxonChain);
 		});
+	} else if (operator.suffix === "root" ) {
+	  source(function(tiddler, title) {
+      if (isRoot(tiddler, title, operator.operand)) {
+        results.push(title);
+      }
+	  })
 	} else {
-		
+	  console.error("neuro filter operator suffix not given or not implemented")
 	}
 	return results;
 };

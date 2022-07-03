@@ -9,12 +9,11 @@ type: text/css
 	margin-bottom: 1em;
 	margin-top: 1em;
 	max-height: 400px;
-	overflow: scroll;
-	overflow-x: hidden;
+	overflow: auto;
 	padding: 1em;
 	position: relative;
 }
 
-.nc-test {
-	padding: 2em;
+.nc-scrollable table {
+  margin: 0;
 }

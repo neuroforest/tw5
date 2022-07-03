@@ -51,3 +51,7 @@ div.tc-edit-add-tag button {
 div.tc-tags-wrapper {
     margin-bottom: 0px;
 }
+
+span.nc-tiddler-title-icon {
+    vertical-align: middle;
+}

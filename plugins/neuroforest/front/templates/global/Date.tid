@@ -1,0 +1,26 @@
+list-before: $:/core/ui/ViewTemplate/body
+tags: $:/tags/ViewTemplate
+title: $:/plugins/neuroforest/front/templates/Date
+
+<$list filter="[all[current]tag[.ph Dates]]" variable="current">
+
+<table class="nc-table-raw">
+<tr><td style="vertical-align:top;">
+
+!!!''Journal''
+<$list filter="[tag[.sh Journal]prefix<current>sort[title]]" />
+
+</td><td style="vertical-align:top;">
+
+!!!''History''
+<$list filter="[!tag[.sh Journal]prefix<current>!title<current>sort[title]]" />
+
+</td><td style="vertical-align:top;">
+
+!!!''Linked''
+<$list filter="[all[current]backlinks[]]" />
+
+</td></tr>
+</table>
+
+</$list>

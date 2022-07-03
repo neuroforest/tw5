@@ -4,9 +4,9 @@ title: $:/plugins/neuroforest/front/snippets/Tree
 
 !!!''TREE''
 <div class="tc-table-of-contents nc-tree">
-	<$macrocall
-		$name="toc-selective-expandable"
-		tag=<<currentTiddler>>
-		sort="sort[custom-sort]"
-	/>
+  <$macrocall
+    $name="toc-selective-expandable"
+    tag=<<currentTiddler>>
+    sort="sort[custom-sort]"
+  />
 </div>

@@ -234,4 +234,11 @@ exports.nfMerge = function(tiddlerTitles) {
   return {"code": 204};
 }
 
+exports.nfSearch = function(query) {
+  $tw.wiki.addTiddler({title: "$:/temp/search", text: query});
+  $tw.wiki.addTiddler({title: "$:/temp/search/input", text: query});
+  $tw.wiki.addTiddler({title: "$:/state/popup/search-dropdown--874113614", text: "(42,254,99,21)"})
+  return {"code": 204};
+}
+
 })();

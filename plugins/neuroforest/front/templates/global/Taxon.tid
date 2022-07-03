@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
   <table class=nc-table-dark style="width:100%;">
 	<tr>
 	  <td>
-		<div class="tc-table-of-contents">
+		<div align="left" class="tc-table-of-contents">
 		  <$macrocall
 		    $name=toc-selective-expandable
 				tag=<<currentTiddler>>
@@ -16,9 +16,13 @@ type: text/vnd.tiddlywiki
 		</div>
 	  </td>
 	  <td align=left>
-	  	  <$link to={{!!bio.special}} />
-	  	  <br><br>
-	  	  {{||$:/plugins/neuroforest/front/templates/Translation}}  
+      <$list filter="[all[current]has[bio.special]]">
+        <$link to={{!!bio.special}} />
+        <br><br>
+      </$list>
+      <div align="left">
+        {{||$:/plugins/neuroforest/front/templates/Translation}}
+      </div>
 	  </td>
 	  <td align=center>
 		{{||$:/plugins/neuroforest/front/templates/Taxonomy}}

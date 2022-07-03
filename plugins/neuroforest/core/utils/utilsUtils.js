@@ -51,7 +51,7 @@ exports.getPrimary = function(tiddler) {
   if (tiddlerTags.length === 0) {
     console.error(
       "Tiddler " 
-      	+ tiddler.fields.title 
+      + tiddler.fields.title
       + " has no tags."
     );
    	return neuroPrimary; // undefined
@@ -59,8 +59,8 @@ exports.getPrimary = function(tiddler) {
     neuroPrimary = tiddlerTags[0];
   } else {
     console.error(
-      "Could not set neuro.priamry, tags: "
-      + tiddlerTags.toString()
+      "Could not set neuro.primary for "
+      + tiddler.fields.title
     );
    	return neuroPrimary; // undefined
   }
@@ -71,8 +71,7 @@ exports.getPrimary = function(tiddler) {
     {"neuro.primary": neuroPrimary}
   );
   $tw.wiki.addTiddler(newTiddler);
-  
-  
+
   // Return the newly acquired neuro.primary.
   return neuroPrimary;
 }

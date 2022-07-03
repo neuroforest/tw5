@@ -27,6 +27,9 @@ exports.handler = function(request,response,state) {
     var newText = state.queryParameters["newText"];
     var filter = state.queryParameters["filter"];
     var status = state.wiki.nfReplace(oldText, newText, filter);
+  } else if (action === "search") {
+    var query = state.queryParameters["query"];
+    var status = state.wiki.nfSearch(query);
   } else {
     var message = `Action is not supported ${action}`
     console.error(message);

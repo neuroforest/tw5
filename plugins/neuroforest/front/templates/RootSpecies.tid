@@ -1,0 +1,15 @@
+title: $:/plugins/neuroforest/front/templates/RootSpecies
+
+<$set name="filter" value="[prefix[.bt-s ]neuro:root<currentTiddler>]" >
+  <div class="nc-enhance">
+    Number of [[species|.bt Species]]: ''<$count tag filter=<<filter>> />''
+  </div>
+  <$scrollable class="nc-scrollable" style="width:100%">
+    <table class="nc-table">
+    <$list filter=<<filter>>>
+		  <$macrocall $name="get-name" title={{!!title}} />
+		  <tr><td><$link to={{!!title}}>{{!!name}}</$link></td><td>{{!!trans.slv}}</td><td>{{!!trans.eng}}</td></tr>
+		</$list>
+    </table>
+  </$scrollable>
+</$set>
