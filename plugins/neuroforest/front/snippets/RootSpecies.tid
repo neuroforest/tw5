@@ -1,0 +1,5 @@
+caption: NF Root Species
+tags: $:/tags/TextEditor/Snippet
+title: $:/plugins/neuroforest/front/snippets/RootSpecies
+
+{{||$:/plugins/neuroforest/front/templates/RootSpecies}}

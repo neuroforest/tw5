@@ -51,7 +51,13 @@ function getTaxonChain(title) {
 	}
 }
 
-function isRoot(tiddler, title, root) {
+function isRoot(tiddler, title, root, count) {
+  count += 1
+  if (count > 50) {
+    console.error("Infinite loop for tiddler " + title);
+    return false;
+  }
+
   if (title === root) {
     return true;
   } else if (title === "$:/plugins/neuroforest/front/tags/Contents") {
@@ -64,7 +70,7 @@ function isRoot(tiddler, title, root) {
       return true;
     } else {
       var primaryTiddler = $tw.wiki.getTiddler(primary);
-      return isRoot(primaryTiddler, primary, root);
+      return isRoot(primaryTiddler, primary, root, count);
     }
   }
 }
@@ -80,11 +86,22 @@ exports.neuro = function(source, operator, options) {
 		});
 	} else if (operator.suffix === "root" ) {
 	  source(function(tiddler, title) {
-      if (isRoot(tiddler, title, operator.operand)) {
+      if (isRoot(tiddler, title, operator.operand, 0)) {
         results.push(title);
       }
 	  })
-	} else {
+	} else if (operator.suffix === "branch") {
+    source(function(tiddler, title) {
+      var branchTiddlers = $tw.wiki.filterTiddlers(`[tag[${operator.operand}]prefix[${operator.operand} @]]`);
+      for (var i in branchTiddlers) {
+        var branchTiddler = branchTiddlers[i];
+        if (isRoot(tiddler, title, branchTiddler, 0)) {
+          results.push(title);
+          break;
+        }
+      }
+    })
+   } else {
 	  console.error("neuro filter operator suffix not given or not implemented")
 	}
 	return results;

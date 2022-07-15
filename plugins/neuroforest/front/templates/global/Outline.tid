@@ -2,7 +2,7 @@ list-before: $:/plugins/tiddlywiki/comments/footer-view-template-segment
 tags: $:/tags/ViewTemplate
 title: $:/plugins/neuroforest/front/templates/Outline
 
-<$list filter="[all[current]search:neuro.role:literal[outline]]" variable="current">
+<$list filter="[all[current]field:neuro.role[outline]]" variable="current">
 {{||$:/plugins/neuroforest/front/templates/Image}}
 <div style="padding-bottom:0.5em;">
 <tr style="display:table;width:100%;border:none;">

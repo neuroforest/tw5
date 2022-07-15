@@ -1,5 +1,5 @@
 caption: NF Code Link
 tags: $:/tags/TextEditor/Snippet
-title: $:/plugins/neuroforest/front/snippets/CodeLink.tid
+title: $:/plugins/neuroforest/front/snippets/CodeLink
 
-<$link to=".cp-sh-cm ">``</$link>
+<$link to="">``</$link>

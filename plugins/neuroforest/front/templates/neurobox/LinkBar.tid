@@ -3,7 +3,7 @@ tags: $:/plugins/neuroforest/front/tags/NeuroBox
 title: $:/plugins/neuroforest/front/templates/LinkBar
 
 
-<tr class=neuro-icon-row style="border:none;">
+<tr class=nc-icon-row style="border:none;">
 <$list filter="[all[shadows]tag[$:/plugins/neuroforest/front/tags/LinkBar]sort[custom-sort]]" variable="link">
 <$set name="keyword" tiddler=<<link>> field="neuro.keyword">
 <$list filter="[all[current]has<keyword>]">

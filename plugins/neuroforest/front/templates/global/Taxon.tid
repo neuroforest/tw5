@@ -4,7 +4,7 @@ title: $:/plugins/neuroforest/front/templates/Taxon
 type: text/vnd.tiddlywiki
 
 <$list filter="[all[current]prefix[.bt-]!search:title[#]] -[prefix[.bt-s ]]">
-  <table class=nc-table-dark style="width:100%;">
+  <table class=nc-table-dark style="width:100%;margin-bottom:0;">
 	<tr>
 	  <td>
 		<div align="left" class="tc-table-of-contents">
@@ -23,6 +23,7 @@ type: text/vnd.tiddlywiki
       <div align="left">
         {{||$:/plugins/neuroforest/front/templates/Translation}}
       </div>
+      {{||$:/plugins/neuroforest/front/templates/LinkBar}}
 	  </td>
 	  <td align=center>
 		{{||$:/plugins/neuroforest/front/templates/Taxonomy}}

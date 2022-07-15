@@ -75,7 +75,6 @@ ImageWidget.prototype.render = function(parent,nextSibling) {
 	// Create the element and assign the attributes
 	var domNodeWrapper = this.document.createElement("a");
 	domNodeWrapper.setAttribute("href",src);
-	// domNodeWrapper.setAttribute("class","neuro-img");
 	domNodeWrapper.setAttribute("target","_blank");
 	var domNode = this.document.createElement(tag);
 	domNode.setAttribute("src",src);

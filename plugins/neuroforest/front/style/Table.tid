@@ -44,6 +44,17 @@ type: text/css
     background-color: #2e3440;
 }
 
+.nc-table-prog {
+    width: 100%;
+    border: none;
+}
+
+.nc-table-prog td {
+    text-align: left;
+    vertical-align: top;
+    border: none;
+}
+
 .nc-table-raw {
     border: none;
     width: 100%;

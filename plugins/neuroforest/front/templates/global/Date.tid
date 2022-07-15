@@ -4,18 +4,18 @@ title: $:/plugins/neuroforest/front/templates/Date
 
 <$list filter="[all[current]tag[.ph Dates]]" variable="current">
 
-<table class="nc-table-raw">
-<tr><td style="vertical-align:top;">
+<table class="nc-table-prog">
+<tr><td>
 
 !!!''Journal''
 <$list filter="[tag[.sh Journal]prefix<current>sort[title]]" />
 
-</td><td style="vertical-align:top;">
+</td><td>
 
 !!!''History''
 <$list filter="[!tag[.sh Journal]prefix<current>!title<current>sort[title]]" />
 
-</td><td style="vertical-align:top;">
+</td><td>
 
 !!!''Linked''
 <$list filter="[all[current]backlinks[]]" />

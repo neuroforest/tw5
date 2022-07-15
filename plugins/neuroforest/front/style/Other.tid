@@ -9,3 +9,12 @@ type: text/css
 div.tc-search svg {
   fill: #d7dde9;
 }
+
+img.nc-image {
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+blockquote cite {
+  font-style: normal;
+}

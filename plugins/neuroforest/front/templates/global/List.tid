@@ -2,7 +2,7 @@ list-before: $:/plugins/tiddlywiki/comments/footer-view-template-segment
 tags: $:/tags/ViewTemplate
 title: $:/plugins/neuroforest/front/templates/List
 
-<$list filter="[all[current]search:neuro.role:literal[list]sort[custom-sort]]" variable="current">
+<$list filter="[all[current]field:neuro.role[list]sort[custom-sort]]" variable="current">
 	<div class="nc-list-header">
     <div class="nc-enhance">
       Number of elements: ''<$count tag filter="[tag<current>sort[title]]"/>''

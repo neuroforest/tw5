@@ -4,7 +4,7 @@ title: $:/plugins/neuroforest/front/templates/Image
 
 <$list filter="[all[current]has[img]]">
   <div align=center style="height:200">
-  	<$image class="neuro-img" source={{!!img}} />
+  	<$image class="nc-image" source={{!!img}} />
     <div align="left" style="font-size:16px;line-height:1;">{{!!imgc}}</div>
   </div>
 <hr>

@@ -1,0 +1,5 @@
+custom-sort: 7
+neuro.icon: $:/plugins/neuroforest/front/images/Bird
+neuro.target: ORGANISMS
+tags: $:/plugins/neuroforest/front/tags/NeuroControls
+title: $:/plugins/neuroforest/front/links/Organisms

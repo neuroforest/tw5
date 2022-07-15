@@ -4,7 +4,7 @@ title: $:/core/ui/ViewTemplate/body
 <$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
 
 <$list filter="[all[current]!prefix[$:/]!prefix[.cp-js-fn ]!prefix[.cp-js-ob ]!search:neuro.role[list]!search:neuro.role[outline]!search:neuro.role[read]!search:neuro.role[taxon.]!prefix[.me-t]!prefix[.me-b]]">
-<div class="neuro-box-wrapper" style="width:36%;float:right">
+<div class="nc-neuro-box-wrapper" style="width:36%;float:right">
 
 {{||$:/plugins/neuroforest/front/templates/NeuroBox}}
 

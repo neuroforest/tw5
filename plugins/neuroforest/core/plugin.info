@@ -2,7 +2,7 @@
 	"description": "NeuroForest Core",
 	"list": "readme",
 	"name": "Neuroforest Core",
-	"source": "https://github.com/neuroforest/tw5-plugin-core.git",
+	"source": "https://github.com/neuroforest/tw5-plugins.git",
 	"title": "$:/plugins/neuroforest/core",
-	"version": "1.1.1"
+	"version": "1.1.2"
 }

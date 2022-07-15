@@ -15,7 +15,7 @@ exports.path = /^\/neuro\/tiddlers\/(.+)$/;
 
 exports.handler = function(request,response,state) {
 	var title = $tw.utils.decodeURIComponentSafe(state.params[0]),
-	fields = JSON.parse(state.data);
+	  fields = JSON.parse(state.data);
 	// Pull up any subfields in the `fields` object
 	if(fields.fields) {
 		$tw.utils.each(fields.fields,function(field,name) {

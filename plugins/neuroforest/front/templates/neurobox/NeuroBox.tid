@@ -2,7 +2,7 @@ list-before: $:/core/ui/ViewTemplate/body
 title: $:/plugins/neuroforest/front/templates/NeuroBox
 
 <$list filter="[all[current]!prefix[$:/]]">
-<div class="neuro-box">
+<div class="nc-neuro-box">
 <table>
 <$list filter="[all[shadows+tiddlers]tag[$:/plugins/neuroforest/front/tags/NeuroBox]sort[custom-sort]]" variable=child>
 <tr>

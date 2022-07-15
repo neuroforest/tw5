@@ -36,7 +36,6 @@ exports.handler = function(request,response,state) {
     var status = {"code": 404, "message": message}
   }
 
-  console.log(status);
   var statusCode = status.code;
   // Writing response
   if (statusCode === 200) {

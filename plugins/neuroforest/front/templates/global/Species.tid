@@ -4,10 +4,10 @@ title: $:/plugins/neuroforest/front/templates/Species
 type: text/vnd.tiddlywiki
 
 <$list filter="[all[current]prefix[.bt-s ]]">
-  <table class=nc-table-dark style="width:100%;">
+  <table class=nc-table-dark style="width:100%;margin-bottom:0;">
 	<tr>
-	  <td align=center style="padding:0.8em 0.5em 0.5em 0.5em;">
-        <$image source={{!!img}} height=256px/>
+	  <td align=center style="padding: 6px 6px 7px 7px;">
+        <$image source={{!!img}} height=256px class="nc-image"/>
 	  </td>
 	  <td align=left>
       <$list filter="[all[current]has[bio.special]]">
@@ -27,7 +27,7 @@ type: text/vnd.tiddlywiki
       </div>
       <$list filter="[all[current]has[imgc]]">
         <div align="left">
-          Image caption: {{!!imgc}}
+          🡄 {{!!imgc}}
         </div>
       </$list>
 	  </td>

@@ -1,0 +1,40 @@
+title: $:/plugins/neuroforest/front/templates/PyObject
+tags: $:/tags/ViewTemplate
+
+<$list filter="[all[current]prefix[.cp-py-ob ]removeprefix[.cp-py-ob ]]" variable="object">
+  <$set name="level" value={{{ [<object>split[.]count[]] }}}>
+    <hr>
+    <table class="nc-table-prog">
+      <tr>
+        <td>
+
+          !!!''Methods''
+          <$set name="function" value={{{[<object>addprefix[.cp-py-fn ]addsuffix[.]] }}}>
+            <$list filter="[prefix<function>]" variable="candidate">
+              <$set name="candidate-level" value={{{ [<candidate>removeprefix[.cp-py-fn ]split[.]count[]] }}}>
+                <$list filter="[<level>add[1]compare:number:eq<candidate-level>]">
+                  <$macrocall $name="get-name" title=<<candidate>> />
+                  <$link to=<<candidate>>><code><$transclude tiddler=<<candidate>> field="name" /></code></$link><br>
+                </$list>
+              </$set>
+            </$list>
+          </$set>
+        </td>
+        <td>
+
+          !!!''Attributes''
+          <$set name="function" value={{{[<object>addprefix[.cp-py-pr ]addsuffix[.]] }}}>
+            <$list filter="[prefix<function>]" variable="candidate">
+              <$set name="candidate-level" value={{{ [<candidate>removeprefix[.cp-py-pr ]split[.]count[]] }}}>
+                <$list filter="[<level>add[1]compare:number:eq<candidate-level>]">
+                  <$macrocall $name="get-name" title=<<candidate>> />
+                  <$link to=<<candidate>>><code><$transclude tiddler=<<candidate>> field="name" /></code></$link><br>
+                </$list>
+              </$set>
+            </$list>
+          </$set>
+        </td>
+      </tr>
+    </table>
+  </$set>
+</$list>

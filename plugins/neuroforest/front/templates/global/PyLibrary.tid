@@ -1,0 +1,60 @@
+title: $:/plugins/neuroforest/front/templates/PyLibrary
+tags: $:/tags/ViewTemplate
+
+<$list filter="[all[current]prefix[.cp-py-li ]removeprefix[.cp-py-li ]]" variable="library">
+  <$set name="level" value={{{ [<library>split[.]count[]] }}}>
+    <hr>
+    <table class="nc-table-prog">
+      <tr>
+        <td>
+
+          !!!''Functions''
+          <$set name="function" value={{{ [<library>addprefix[.cp-py-fn ]addsuffix[.]] }}}>
+            <$set name="hidden-function" value={{{ [<library>addprefix[.cp-py-fn _]addsuffix[.]] }}}>
+              <$list filter="[prefix<function>] [prefix<hidden-function>] +[sort[title]]" variable="candidate">
+                <$set name="candidate-level" value={{{ [<candidate>removeprefix[.cp-py-fn ]split[.]count[]] }}}>
+                  <$list filter="[<level>add[1]compare:number:eq<candidate-level>]">
+                    <$macrocall $name="get-name" title=<<candidate>> />
+                    <$link to=<<candidate>>><code><$transclude tiddler=<<candidate>> field="name" /></code></$link><br>
+                  </$list>
+                </$set>
+              </$list>
+            </$set>
+          </$set>
+        </td>
+        <td>
+
+          !!!''Objects''
+          <$set name="object" value={{{ [<library>addprefix[.cp-py-ob ]addsuffix[.]] }}}>
+            <$set name="hidden-object" value={{{ [<library>addprefix[.cp-py-ob _]addsuffix[.]] }}}>
+              <$list filter="[prefix<object>] [prefix<hidden-object>] +[sort[title]]" variable="candidate">
+                <$set name="candidate-level" value={{{ [<candidate>removeprefix[.cp-py-ob ]split[.]count[]] }}}>
+                  <$list filter="[<level>add[1]compare:number:eq<candidate-level>]">
+                    <$macrocall $name="get-name" title=<<candidate>> />
+                    <$link to=<<candidate>>><code><$transclude tiddler=<<candidate>> field="name" /></code></$link><br>
+                  </$list>
+                </$set>
+              </$list>
+            </$set>
+          </$set>
+        </td>
+        <td>
+
+          !!!''Packages''
+          <$set name="package" value={{{ [<library>addprefix[.cp-py-li ]addsuffix[.]] }}}>
+            <$set name="hidden-package" value={{{ [<library>addprefix[.cp-py-li _]addsuffix[.]] }}}>
+              <$list filter="[prefix<package>] [prefix<hidden-package>] +[sort[title]]" variable="candidate">
+                <$set name="candidate-level" value={{{ [<candidate>removeprefix[.cp-py-li ]split[.]count[]] }}}>
+                  <$list filter="[<level>add[1]compare:number:eq<candidate-level>]">
+                    <$macrocall $name="get-name" title=<<candidate>> />
+                    <$link to=<<candidate>>><code><$transclude tiddler=<<candidate>> field="name" /></code></$link><br>
+                  </$list>
+                </$set>
+              </$list>
+            </$set>
+          </$set>
+        </td>
+      </tr>
+    </table>
+  </$set>
+</$list>

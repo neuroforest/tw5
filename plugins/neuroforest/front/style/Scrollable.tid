@@ -16,4 +16,5 @@ type: text/css
 
 .nc-scrollable table {
   margin: 0;
+  width: 100%;
 }

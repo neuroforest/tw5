@@ -2,7 +2,7 @@ list-before: $:/plugins/tiddlywiki/comments/footer-view-template-segment
 tags: $:/tags/ViewTemplate
 title: $:/plugins/neuroforest/front/templates/Index
 
-<$list filter="[all[current]search:neuro.role:literal[tree]]" variable="current">
+<$list filter="[all[current]field:neuro.role[tree]]" variable="current">
 
 {{||$:/plugins/neuroforest/front/templates/Tree}}
 
