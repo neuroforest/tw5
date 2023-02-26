@@ -1,0 +1,7 @@
+caption: NF Books
+tags: $:/tags/TextEditor/Snippet
+title: $:/plugins/neuroforest/front/snippets/Books
+
+!!!''Books''
+
+<$list filter="[search:book.author{!!title}]"/>

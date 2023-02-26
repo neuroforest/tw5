@@ -1,0 +1,7 @@
+custom-sort: 20
+tags: $:/plugins/neuroforest/front/tags/NeuroBox
+title: $:/plugins/neuroforest/front/templates/Icd-10
+
+<$list filter="[all[current]has[icd-10]]">
+  [[ICD-10]]: <code>{{!!icd-10}}</code>
+</$list>

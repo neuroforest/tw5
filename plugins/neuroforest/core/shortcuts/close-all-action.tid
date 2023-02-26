@@ -1,0 +1,7 @@
+title: $:/core/ui/KeyboardShortcuts/close-all
+tags: $:/tags/KeyboardShortcut
+key: ((close-all))
+
+<$navigator story="$:/StoryList" history="$:/HistoryList">
+<$action-sendmessage $message="tm-close-all-tiddlers"/>
+</$navigator>

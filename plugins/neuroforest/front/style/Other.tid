@@ -18,3 +18,7 @@ img.nc-image {
 blockquote cite {
   font-style: normal;
 }
+
+cite a {
+  color: #d2ffac;
+}

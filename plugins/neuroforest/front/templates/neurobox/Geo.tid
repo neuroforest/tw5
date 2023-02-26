@@ -1,0 +1,9 @@
+custom-sort: 20
+tags: $:/plugins/neuroforest/front/tags/NeuroBox
+title: $:/plugins/neuroforest/front/templates/neurobox/Geo
+
+<$list filter="[all[current]fields[]prefix[g.]]" variable="geo">
+  <$set name="value" tiddler=<<currentTiddler>> field=<<geo>> >
+    <$macrocall $name="get-keyword-link" keyword=<<geo>> />: <code><$macrocall $name="resolve-number" number=<<value>> keyword=<<geo>> /></code><br>
+  </$set>
+</$list>

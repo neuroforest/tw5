@@ -3,5 +3,5 @@ tags: $:/plugins/neuroforest/front/tags/NeuroBox
 title: $:/plugins/neuroforest/front/templates/EnzymeClassification
 
 <$list filter="[all[current]fields[]prefix[ec-number]]" variable=ec>
-  <$macrocall $name=resolve-keyword keyword=<<ec>> />: <code>EC <$transclude tiddler=<<currentTiddler>> field=<<ec>> /></code>
+  <$macrocall $name="get-keyword-link" keyword=<<ec>> />: <code>EC <$transclude tiddler=<<currentTiddler>> field=<<ec>> /></code>
 </$list>

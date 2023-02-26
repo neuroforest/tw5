@@ -74,6 +74,20 @@ exports.getPrimary = function(tiddler) {
 
   // Return the newly acquired neuro.primary.
   return neuroPrimary;
-}
+};
+
+
+exports.resolveKeyword = function(keyword) {
+  var filter = `[field:neuro.keyword[${keyword}]]`;
+  var tiddlerMatches = $tw.wiki.filterTiddlers(filter);
+
+  if (tiddlerMatches) {
+    return tiddlerMatches[0];
+  } else {
+    console.error("Not found: " + keyword);
+    return "";
+  }
+};
+
 
 })();

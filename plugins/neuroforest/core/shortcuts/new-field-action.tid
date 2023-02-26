@@ -1,0 +1,5 @@
+title: $:/core/ui/KeyboardShortcuts/new-field
+tags: $:/tags/KeyboardShortcut
+key: ((new-field))
+
+<$action-sendmessage $message="tm-focus-selector" $param=".tc-edit-field-add-name input"/>

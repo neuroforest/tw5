@@ -18,6 +18,9 @@ exports.handler = function(request,response,state) {
   if (action === "merge") {
     var titles = state.queryParameters["titles"];
     var status = state.wiki.nfMerge(titles);
+  } else if (action === "open") {
+    var title = state.queryParameters["title"];
+    var status = state.wiki.nfOpen(title);
   } else if (action === "rename") {
     var oldTitle = state.queryParameters["oldTitle"];
     var newTitle = state.queryParameters["newTitle"];

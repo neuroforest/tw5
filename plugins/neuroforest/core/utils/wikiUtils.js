@@ -6,6 +6,19 @@ type: application/javascript
 (function() {
 
 "use strict";
+
+exports.nfOpen = function(title) {
+  var tiddler = $tw.wiki.getTiddler(title);
+  if (! tiddler) {
+    var message = `Tiddler '${title}' does not exist.`;
+    console.log(message);
+    return {"code": 500, "message": message};
+  } else {
+    let actions=`<$navigator story="$:/StoryList" history="$:/HistoryList"><$action-navigate $to="${title}"/></$navigator>`;
+    window.parent.$tw.rootWidget.invokeActionString(actions);
+    return {"code": 204}
+  }
+};
   
 exports.nfRename = function(from, to) {
   var tiddler = $tw.wiki.getTiddler(from);
