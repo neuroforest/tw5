@@ -1,6 +1,5 @@
 title: $:/plugins/neuroforest/front/templates/Tree
 
-!!!''TREE''
 <$set name="objects" value={{{ [<current>has[encoding]get[encoding]removeprefix[`]removesuffix[`]addsuffix[ Objects]] }}}>
   <div class="tc-table-of-contents nc-tree">
     <$macrocall

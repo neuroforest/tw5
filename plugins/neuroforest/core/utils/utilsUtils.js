@@ -48,7 +48,7 @@ exports.getPrimary = function(tiddler) {
   
   // Setting neuro primary
   var tiddlerTags = tiddler.fields.tags;
-  if (tiddlerTags.length === 0) {
+  if (!tiddler.fields.tags || tiddlerTags.length === 0) {
     console.error(
       "Tiddler " 
       + tiddler.fields.title

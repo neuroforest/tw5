@@ -8,6 +8,7 @@ title: $:/plugins/neuroforest/front/templates/Outline
 <tr style="display:table;width:100%;border:none;">
 <td style="padding:0;vertical-align:top;">
 
+!!!''TREE''
 {{||$:/plugins/neuroforest/front/templates/Tree}}
 </td><td style="width:5%;"></td><td style="width:50%;">
 <table style="border:none;margin:0;">

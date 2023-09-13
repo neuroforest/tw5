@@ -20,9 +20,11 @@ title: $:/plugins/neuroforest/front/templates/global/Book
     </tr><tr>
       <td>Year</td>
       <td>
-        <$set name="year" filter="[{!!book.year}prefix[Year ]]">
-          <<year>>
-        </$set>
+        <$list filter="[<currentTiddler>has[book.year]]">
+          <$set name="year" filter="[{!!book.year}addprefix[Year ]]">
+            <<year>>
+          </$set>
+        </$list>
       </td>
       <td rowspan="3" style="width:20%;"><<link-icon "pdf">></td></tr>
     <tr><td>Place</td><td>{{!!book.place}}</td></tr>

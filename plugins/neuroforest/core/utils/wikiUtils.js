@@ -145,7 +145,7 @@ exports.nfReplace = function(oldText, newText, filter) {
   }
   var tiddlerTitles = $tw.wiki.filterTiddlers(filter);
   if (tiddlerTitles.length === 0) {
-    var message = "0 matches";
+    var message = "0 tiddlers affected";
     console.error(message);
     return {"code": 500, "message": message};
   }
@@ -160,6 +160,7 @@ exports.nfReplace = function(oldText, newText, filter) {
         console.error(message);
     }
 
+    // Do not replace text in identifiers
     for (var field in tiddler.fields) {
       var ignoreFields = ["title", "neuro.id", "tmap.id"];
       if (ignoreFields.indexOf(field) > -1) {
