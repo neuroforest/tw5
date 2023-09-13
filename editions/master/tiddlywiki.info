@@ -1,6 +1,7 @@
 {
     "description": ".mWiki",
     "plugins": [
+        "bimlas/highlight-searched-text",
     	"felixhayashi/hotzone",
     	"hoelzro/tw-progress-bar",
         "kookma/TW-Commander",
