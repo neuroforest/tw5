@@ -1,0 +1,4 @@
+tags: $:/tags/Image
+title: $:/plugins/neuroforest/front/images/Gpx
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1007.927" height="762.184" viewBox="0 0 266.681 201.661"><defs><path id="a" d="M32.423 107.162H216.46v130.383H32.423z"/></defs><path fill="none" d="M-53.921-107.207H212.76V94.454H-53.921z" style="opacity:1;fill:gray;fill-opacity:0;stroke-width:.264583" transform="translate(53.921 107.207)"/><text xml:space="preserve" style="font-style:normal;font-weight:400;font-size:93.1333px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#a);opacity:1;fill:#fff;fill-opacity:1;stroke:none" transform="matrix(1.343 0 0 1.34648 -22.102 -116.507)"><tspan x="32.424" y="194.008"><tspan style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#fff;fill-opacity:1">GPX</tspan></tspan></text></svg>

@@ -1,0 +1,18 @@
+tags: $:/tags/ViewTemplate
+title: $:/plugins/neuroforest/front/templates/global/Journal
+
+<$list filter="[all[current]field:neuro.role[journal]]" variable="journal">
+
+  <$list filter="[prefix<currentTiddler>search:title[ #]]" variable="tiddler">
+
+  ---
+    <$set name="category" filter="[<tiddler>split[#]last[]]">
+      <$set name="icon" tiddler=<<category>> field="icon">
+        <h2><$link to=<<tiddler>>><<icon>></$link> ''<<category>>''</h2>
+
+        <$transclude mode="block" tiddler=<<tiddler>> />
+
+      </$set>
+    </$set>
+  </$list>
+</$list>

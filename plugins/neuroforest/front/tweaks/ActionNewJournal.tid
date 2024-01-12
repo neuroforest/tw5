@@ -9,7 +9,7 @@ description: create a new journal tiddler
 <$action-sendmessage $message="tm-new-tiddler" title=<<journalTitle>> tags=<<get-tags>> text={{{ [<journalTitle>get[]] }}}/>
 </$reveal>
 <$reveal type="match" state=<<journalTitle>> text="">
-<$action-sendmessage $message="tm-new-tiddler" title=<<journalTitle>> tags=<<get-tags>> text=<<journalText>> neuro.role="read"/>
+<$action-sendmessage $message="tm-new-tiddler" title=<<journalTitle>> tags=<<get-tags>> text=<<journalText>> neuro.role="journal"/>
 </$reveal>
 </$wikify>
 </$vars>

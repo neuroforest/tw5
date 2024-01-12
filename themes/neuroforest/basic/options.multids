@@ -1,0 +1,5 @@
+title: $:/themes/neuroforest/basic/options/
+
+stickytitles: yes
+sidebarlayout: fixed-fluid
+codewrapping: pre-wrap

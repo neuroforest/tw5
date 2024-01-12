@@ -1,0 +1,15 @@
+title: $:/themes/neuroforest/basic/metrics/
+
+bodyfontsize: 19px
+bodylineheight: 22px
+fontsize: 16px
+lineheight: 21px
+sidebarbreakpoint: 960px
+sidebarwidth: 370px
+storyleft: 0px
+storytop: 0px
+storyright: 750px
+storywidth: 500px
+tiddlerwidth: 690px
+sidebarbreakpoint: 960px
+sidebarwidth: 350px
