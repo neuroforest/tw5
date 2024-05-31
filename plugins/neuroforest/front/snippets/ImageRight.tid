@@ -1,0 +1,5 @@
+caption: NF Image Right
+tags: $:/tags/TextEditor/Snippet
+title: $:/plugins/neuroforest/front/snippets/ImageRight
+
+<div style="float:right;width:40%;border:1px solid white;border-radius:4px;padding:0.4em;margin:0.4em;">[img[]]</div>

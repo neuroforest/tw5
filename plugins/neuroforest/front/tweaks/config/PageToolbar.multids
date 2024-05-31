@@ -1,6 +1,6 @@
 title: $:/config/PageControlButtons/Visibility/$:
 
-/core/ui/Buttons/close-all: show
+/core/ui/Buttons/close-all: hide
 /core/ui/Buttons/home: show
 /core/ui/Buttons/more-page-actions: show
 /core/ui/Buttons/new-journal: show

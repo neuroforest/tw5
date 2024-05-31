@@ -31,11 +31,6 @@ exports.handler = function(request,response,state) {
     tiddlerFields.revision = state.wiki.getChangeCount(title);
     tiddlerFields.type = tiddlerFields.type || "text/vnd.tiddlywiki";
 
-    // Parse wikitext
-    var parsedTiddler = state.wiki.parseTiddler(title);
-    var parseTree = parsedTiddler.tree;
-    tiddlerFields["text.parsed"] = parseTree;
-
     // Write response 
     response.writeHead(200, {"Content-Type": "application/json; charset=utf-8"});
     response.end(JSON.stringify(tiddlerFields),"utf8");

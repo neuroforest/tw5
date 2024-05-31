@@ -1,4 +1,4 @@
-custom-sort: 1
+custom-sort: 06
 neuro.icon: $:/plugins/neuroforest/front/images/Commander
 neuro.target: $:/Commander
 tags: $:/plugins/neuroforest/front/tags/NeuroControls

@@ -1,0 +1,5 @@
+custom-sort: 04
+neuro.icon: $:/plugins/neuroforest/front/images/Todo
+neuro.target: TASK MANAGER
+tags: $:/plugins/neuroforest/front/tags/NeuroControls
+title: $:/plugins/neuroforest/front/links/Todo
