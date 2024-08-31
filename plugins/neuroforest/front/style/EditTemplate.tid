@@ -1,0 +1,47 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/EditTemplate
+type: text/vnd.tiddlywiki
+
+.tc-editor-toolbar button.tc-selected {
+  fill: <<color background>>;
+}
+
+.tc-tiddler-edit-frame .tc-edit {
+  color: <<color foreground>> !important;
+}
+
+div.tc-editor-toolbar button {
+  background-color: <<color page-background>>;
+  color: <<color foreground>>;
+}
+
+div.tc-tiddler-edit-frame .tc-edit {
+  color: <<color foreground>>;
+}
+
+div.tc-edit-add-tag button {
+  margin: 0px 4px 0px 4px;
+}
+
+table.tc-edit-fields input.tc-edit-texteditor {
+  background-color: <<color background>>;
+	margin: 2px;
+	border: 1px solid <<color foreground>>;
+	border-radius: 2px;
+	padding: 1px 3px 1px 3px;
+}
+
+table.tc-edit-fields td.tc-edit-field-name {
+  width: 20%;
+	white-space: nowrap;
+  padding-left: 14px;
+}
+
+table.tc-edit-fields td.tc-edit-field-remove {
+  text-align: center;
+	width: 4%;
+}
+
+table.tc-edit-fields tr td {
+  padding: 0px 4px 0px 4px;
+}

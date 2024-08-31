@@ -140,6 +140,11 @@ function sendResponse(request,response,statusCode,headers,data,encoding) {
 				return;
 			}
 		}
+	} else {
+		// RFC 7231, 6.1. Overview of Status Codes:
+		// Browser clients may cache 200, 203, 204, 206, 300, 301, 
+		// 404, 405, 410, 414, and 501 unless given explicit cache controls
+		headers["Cache-Control"] = headers["Cache-Control"] || "no-store";
 	}
 	/*
 	If the gzip=yes is set, check if the user agent permits compression. If so,
@@ -359,8 +364,9 @@ Server.prototype.listen = function(port,host,prefix) {
 	}
 	// Display the port number after we've started listening (the port number might have been specified as zero, in which case we will get an assigned port)
 	server.on("listening",function() {
-		var address = server.address();
-		$tw.utils.log("Serving on " + self.protocol + "://" + address.address + ":" + address.port + prefix,"brown/orange");
+		var address = server.address(),
+			url = self.protocol + "://" + (address.family === "IPv6" ? "[" + address.address + "]" : address.address) + ":" + address.port + prefix;
+		$tw.utils.log("Serving on " + url,"brown/orange");
 		$tw.utils.log("(press ctrl-C to exit)","red");
 	});
 	// Listen

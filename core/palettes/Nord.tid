@@ -12,7 +12,7 @@ alert-highlight: #B48EAD
 alert-muted-foreground: #4C566A
 background: #3b4252
 blockquote-bar: <<colour muted-foreground>>
-button-foreground: <<colour page-background>>
+button-foreground: <<colour foreground>>
 code-background: #2E3440
 code-border: #2E3440
 code-foreground: #BF616A
@@ -40,7 +40,10 @@ external-link-background: inherit
 external-link-foreground-hover: inherit
 external-link-foreground-visited: #5E81AC
 external-link-foreground: #8FBCBB
+footnote-target-background: #2E3440
 foreground: #d8dee9
+highlight-background: #ffff78
+highlight-foreground: #000000
 menubar-background: #2E3440
 menubar-foreground: #d8dee9
 message-background: #2E3440
@@ -63,7 +66,7 @@ select-tag-background: #3b4252
 select-tag-foreground: <<colour foreground>>
 selection-background: #5E81AC
 selection-foreground: <<colour foreground>>
-sidebar-button-foreground: <<colour page-background>>
+sidebar-button-foreground: <<colour foreground>>
 sidebar-controls-foreground-hover: #D8DEE9
 sidebar-controls-foreground: #4C566A
 sidebar-foreground-shadow: transparent
@@ -80,6 +83,10 @@ sidebar-tab-foreground: <<colour tab-foreground>>
 sidebar-tiddler-link-foreground-hover: #A3BE8C
 sidebar-tiddler-link-foreground: #81A1C1
 site-title-foreground: <<colour tiddler-title-foreground>>
+stability-deprecated: #bf616a
+stability-experimental: #d08770
+stability-legacy: #88c0d0
+stability-stable: #a3be8c
 static-alert-foreground: #B48EAD
 tab-background-selected: #ECEFF4
 tab-background: #4C566A

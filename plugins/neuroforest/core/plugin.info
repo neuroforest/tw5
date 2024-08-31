@@ -4,5 +4,5 @@
 	"name": "Neuroforest Core",
 	"source": "https://github.com/neuroforest/tw5-plugins.git",
 	"title": "$:/plugins/neuroforest/core",
-	"version": "1.1.4"
+	"version": "1.1.5"
 }

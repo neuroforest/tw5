@@ -2,27 +2,12 @@ tags: $:/tags/Stylesheet
 title: $:/plugins/neuroforest/front/style/Tiddler
 type: text/vnd.tiddlywiki
 
-.tc-editor-toolbar button {
-  background-color: <<color page-background>>;
-  color: <<color foreground>>;
-}
-
-.tc-editor-toolbar button.tc-selected {
-  fill: <<color background>>;
-}
-
 .tc-quote {
   border-left: 5px solid <<color muted-foreground>>;
 }
 
 .tc-tiddler-body {
   overflow: hidden;
-}
-
-.tc-tiddler-frame {
-  border: 2px solid <<color muted-foreground>>;
-  border-radius: 10px;
-  padding: 1.5em 1.5em 0.5em 1.5em;
 }
 
 .tc-tiddler-info {
@@ -41,20 +26,30 @@ type: text/vnd.tiddlywiki
   overflow-wrap: anywhere;
 }
 
-h3 {
-  text-decoration: underline;
+tr.nc-page-controls a.tc-tiddlylink:hover {
+  color: <<color page-background>>;
 }
 
-div.tc-tiddler-edit-frame .tc-edit {
-  color: <<color foreground>>;
+div.nc-page-controls path {
+  fill: red;
 }
 
-div.tc-edit-add-tag button {
-  margin: 0px 4px 0px 4px;
+div.tc-tiddler-frame {
+  border: 2px solid <<color muted-foreground>>;
+  border-radius: 10px;
+  padding: 1.5em 1.5em 0.5em 1.5em;
 }
 
 div.tc-tags-wrapper {
   margin-bottom: 0px;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+pre.bash {
+  border: 1px solid <<color muted-foreground>>;
 }
 
 span.nc-tiddler-title-icon {
@@ -62,5 +57,5 @@ span.nc-tiddler-title-icon {
 }
 
 span.tc-tag-label {
-	border-radius: 0.4em;
+	border-radius: 0.4em !important;
 }

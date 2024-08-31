@@ -2,29 +2,29 @@ tags: $:/tags/Stylesheet
 title: $:/plugins/neuroforest/front/style/DropDown
 type: text/vnd.tiddlywiki
 
-.tc-drop-down {
+div.tc-drop-down {
   border: 2px solid <<color muted-foreground>>;
   margin: 4px;
 	border-radius: 4px;
 }
 
-.tc-drop-down a {
+div.tc-drop-down a {
   color: <<color primary>>;
 }
 
-.tc-drop-down button:hover svg {
+div.tc-drop-down button:hover svg {
   fill: <<color background>> !important;
 }
 
-.tc-drop-down button:hover svg .tc-fill-background {
+div.tc-drop-down button:hover svg .tc-fill-background {
   fill: <<color primary>> !important;
 }
 
-.tc-search-drop-down, .tc-block-dropdown {
+div.tc-search-drop-down, div.tc-block-dropdown {
   border: solid <<color muted-foreground>> 2px;
 	border-radius: 4px;
 }
 
-.tc-search-drop-down em {
+div.tc-search-drop-down em {
   margin: 4px 0px 0px 6px;
 }

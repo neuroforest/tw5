@@ -1,17 +1,19 @@
 # Inherited
 .DS_Store
 .c9/
+.vs/
+.vscode/
 tmp/
 output/
 node_modules/
-
-# Files
+/test-results/
+/playwright-report/
+/playwright/.cache/
 $__StoryList.tid
+
+# Custom
 tiddlywiki.info_tmap
 /editions/master/users.csv
-
-# Directories
 /editions/neuro-temp
 /editions/master/tiddlers
-
 /plugins/felixhayashi/
