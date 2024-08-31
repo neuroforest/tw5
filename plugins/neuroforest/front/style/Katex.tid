@@ -1,15 +1,22 @@
 tags: $:/tags/Stylesheet
 title: $:/plugins/neuroforest/front/style/Katex
-type: text/css
+type: text/vnd.tiddlywiki
 
 .katex {
-  color: #b3f2ef;
-  background-color: #2E3440;
-  padding: 0px 3px 2px 3px;
-  overflow: hidden;
+  color: <<color katex>>;
 }
 
-.katex-html {
-    overflow-x: auto;
-    overflow-y: hidden;
+.katex-display {
+  background-color: <<color page-background>>;
+  border-radius: 0.5em;
+  overflow: hidden;
+  padding: 0.5em;
+}
+
+button .katex {
+  color: <<color foreground>>;
+}
+
+button:hover .katex {
+  color: <<color background>>;
 }

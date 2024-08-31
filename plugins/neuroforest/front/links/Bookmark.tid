@@ -1,4 +1,4 @@
-custom-sort: 4
+custom-sort: 40
 neuro.icon: $:/plugins/neuroforest/front/images/Bookmark
 neuro.target: BOOKMARKS
 tags: $:/plugins/neuroforest/front/tags/NeuroControls

@@ -1,57 +1,66 @@
 tags: $:/tags/Stylesheet
 title: $:/plugins/neuroforest/front/style/Tiddler
-type: text/css
+type: text/vnd.tiddlywiki
+
+.tc-editor-toolbar button {
+  background-color: <<color page-background>>;
+  color: <<color foreground>>;
+}
+
+.tc-editor-toolbar button.tc-selected {
+  fill: <<color background>>;
+}
+
+.tc-quote {
+  border-left: 5px solid <<color muted-foreground>>;
+}
+
+.tc-tiddler-body {
+  overflow: hidden;
+}
 
 .tc-tiddler-frame {
+  border: 2px solid <<color muted-foreground>>;
   border-radius: 10px;
   padding: 1.5em 1.5em 0.5em 1.5em;
-  border: 2px solid white;
+}
+
+.tc-tiddler-info {
+  border: solid <<color muted-foreground>> 1px;
+  border-radius: 8px;
+  margin: 5px 0px 10px 0px;
+  padding: 8px 16px 8px 16px;
+  width: 100%;
+}
+
+.tc-view-field-table {
+  width: 100%;
+}
+
+.tc-view-field-table > tbody > tr > :nth-child(2) {
+  overflow-wrap: anywhere;
 }
 
 h3 {
   text-decoration: underline;
 }
 
-.tc-quote {
-  border-left: 5px solid #feffd5;
-}
-
-.tc-tiddler-controls button svg {
-  fill: #d7dde9;
-}
-
-.tc-tiddler-body {
-    overflow: hidden;
-}
-
-.tc-tiddler-info {
-    border: solid white 1px;
-    border-radius: 8px;
-    margin: 5px 0px 10px 0px;
-    padding: 8px 16px 8px 16px;
-    width: 100%;
-}
-
-.tc-view-field-table {
-    width: 100%;
-}
-
-.tc-view-field-table > tbody > tr > :nth-child(2) {
-    overflow-wrap: anywhere;
-}
-
 div.tc-tiddler-edit-frame .tc-edit {
-    color: white;
+  color: <<color foreground>>;
 }
 
 div.tc-edit-add-tag button {
-    margin: 0px 4px 0px 4px;
+  margin: 0px 4px 0px 4px;
 }
 
 div.tc-tags-wrapper {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 span.nc-tiddler-title-icon {
-    vertical-align: middle;
+  vertical-align: middle;
+}
+
+span.tc-tag-label {
+	border-radius: 0.4em;
 }

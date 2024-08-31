@@ -1,7 +1,0 @@
-tags: $:/tags/Stylesheet
-title: $:/plugins/neuroforest/front/style/Hotzone
-type: text/css
-
-.hzone-focus {
-	box-shadow: 0px 0px 20px 4px rgba(255,255,255,0.44);
-}

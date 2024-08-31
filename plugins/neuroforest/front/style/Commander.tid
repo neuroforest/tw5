@@ -1,7 +1,11 @@
 tags: $:/tags/Stylesheet
 title: $:/plugins/neuroforest/front/style/Commander
-type: text/css
+type: text/vnd.tiddlywiki
 
-table.cmd-ci-table td.leftcol {
-  background-color: red;
+.cmd-ci-table {
+  color: <<color background>>;
+}
+
+legend {
+  color: <<color background>>;
 }

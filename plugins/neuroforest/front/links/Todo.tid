@@ -1,4 +1,4 @@
-custom-sort: 04
+custom-sort: 20
 neuro.icon: $:/plugins/neuroforest/front/images/Todo
 neuro.target: TASK MANAGER
 tags: $:/plugins/neuroforest/front/tags/NeuroControls

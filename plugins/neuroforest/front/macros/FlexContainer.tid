@@ -1,0 +1,9 @@
+tags: $:/tags/Macro
+title: $:/plugins/neuroforest/front/macros/flex-container
+
+\define flex-container(filter)
+<div class="flex-container">
+<$list filter="$filter$"><div class="flex-container-item">
+<$image source={{!!img}} /><$link to={{!!title}} />
+</div></$list></div>
+\end

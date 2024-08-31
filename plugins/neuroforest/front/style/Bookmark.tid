@@ -1,11 +1,11 @@
 tags: $:/tags/Stylesheet
 title: $:/plugins/neuroforest/front/style/Bookmark
-type: text/css
+type: text/vnd.tiddlywiki
 
 div.nc-bookmark {
-    align:center;
-    border: 1px solid white;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    padding: 0px 25px 0px 25px;
+  align: center;
+  border: 1px solid <<color muted-foreground>>;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 0px 25px 0px 25px;
 }

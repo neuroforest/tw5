@@ -1,8 +1,8 @@
 tags: $:/tags/Stylesheet
 title: $:/plugins/neuroforest/front/style/Taxonomy
-type: text/css
+type: text/vnd.tiddlywiki
 
 .nc-taxonomy a {
-  padding: none;
   border: none;
+  padding: none;
 }

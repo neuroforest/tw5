@@ -1,14 +1,6 @@
 tags: $:/tags/Stylesheet
 title: $:/plugins/neuroforest/front/style/NeuroBox
-type: text/css
-
-div.nc-neuro-box {
-  padding: 0.4em;
-  border: 1px solid white;
-  border-radius: 4px;
-  margin-left: 1em;
-  overflow-x: hidden;
-}
+type: text/vnd.tiddlywiki
 
 .nc-neuro-box-header {
   font-size: 1.2em;
@@ -21,24 +13,32 @@ div.nc-neuro-box {
   cursor: auto;
 }
 
-div.nc-neuro-box table {
+div.nc-neuro-box {
+  border: 1px solid <<color muted-foreground>>;
+  border-radius: 4px;
+  margin-left: 1em;
+  overflow-x: hidden;
+  padding: 0.4em;
+}
+
+div.nc-neuro-box img.nc-image {
+  background-color: <<color foreground>>;
+  height: 100%;
+  max-height: 300px;
   width: 100%;
-  margin-top: 0em;
-  margin-bottom: 0em;
-  margin: 0px;
-  padding: 0px;
+}
+
+div.nc-neuro-box table {
   border: none;
+  margin: 0px;
+  margin-bottom: 0em;
+  margin-top: 0em;
+  padding: 0px;
+  width: 100%;
 }
 
 div.nc-neuro-box-wrapper p {
   margin-block-start: 0em;
-}
-
-div.nc-neuro-box img.nc-image {
-  background-color: #f4e0d7;
-  height: 100%;
-  max-height: 300px;
-  width: 100%;
 }
 
 img.nc-icon {
@@ -50,11 +50,6 @@ tr.nc-icon-row {
   height: 0px;
 }
 
-tr.nc-icon-row td {
-  border: none;
-  height: 0px;
-}
-
 tr.nc-icon-row a {
   border: none;
 }
@@ -62,4 +57,9 @@ tr.nc-icon-row a {
 tr.nc-icon-row svg {
   height: 42px;
   width: 42px;
+}
+
+tr.nc-icon-row td {
+  border: none;
+  height: 0px;
 }

@@ -1,4 +1,4 @@
-custom-sort: 5
+custom-sort: 50
 neuro.icon: $:/plugins/neuroforest/front/images/Wikipedia
 neuro.target: .mWiki
 tags: $:/plugins/neuroforest/front/tags/NeuroControls

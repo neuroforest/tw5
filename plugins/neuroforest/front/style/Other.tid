@@ -1,13 +1,43 @@
 tags: $:/tags/Stylesheet
 title: $:/plugins/neuroforest/front/style/Other
-type: text/css
+type: text/vnd.tiddlywiki
 
-.tc-drop-down {
-  border: 2px solid white;
+.tc-menu-list-item {
+  background-color: <<color page-background>>;
+}
+
+.tc-tagged-draggable-list .tc-menu-list-item {
+  background-color: <<color background>>;
+}
+
+blockquote cite {
+  font-style: normal;
+}
+
+code {
+	padding: 0px;
+}
+
+div.nc-border {
+	align:center;
+	border: 1px solid <<color muted-foreground>>;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 0px 25px 0px 25px;
 }
 
 div.tc-search svg {
-  fill: #d7dde9;
+  fill: <<color foreground>>;
+}
+
+h1 strong, h2 strong, h3 strong, h4 strong {
+	color: <<colour foreground>>;
+}
+
+input {
+	border: solid <<color foreground>> 1px ;
+	padding-left: 4px;
+	padding-right: 4px;
 }
 
 img.nc-image {
@@ -15,10 +45,10 @@ img.nc-image {
   vertical-align: middle;
 }
 
-blockquote cite {
-  font-style: normal;
+strong {
+  color: <<color strong-foreground>>;
 }
 
-cite a {
-  color: #d2ffac;
+textarea {
+	font-size: 20px;
 }

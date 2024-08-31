@@ -1,10 +1,10 @@
 tags: $:/tags/Stylesheet
 title: $:/plugins/neuroforest/front/style/Scrollable
-type: text/css
+type: text/vnd.tiddlywiki
 
 .nc-scrollable {
-	background-color: #2E3440;
-	border: 2px solid white;
+	background-color: <<color page-background>>;
+	border: 2px solid <<color muted-foreground>>;
 	border-radius: 4px;
 	margin-bottom: 1em;
 	margin-top: 1em;
@@ -17,6 +17,10 @@ type: text/css
 .nc-scrollable table {
   margin: 0;
   width: 100%;
+}
+
+.nc-scrollable th {
+	background-color: <<color background>>;
 }
 
 .nc-scrollable-index {

@@ -1,65 +1,49 @@
 tags: $:/tags/Stylesheet
 title: $:/plugins/neuroforest/front/style/Table
-type: text/css
+type: text/vnd.tiddlywiki
 
-.nc-link-table {
-    background-color: #f4e0d7;
+.nc-table td {
+  height: 1.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.nc-link-table strong {
-    color: black;
-}
-
-.nc-link-table td {
-    text-align: center;
-    color: black;
-}
-
-.nc-link-table tr {
-	height: 39px;
-}
-
-.nc-table a {
-    padding: none;
-    border: none;
-}
-
-.nc-table td, .nc-table-dark td {
-    height: 1.5em;
-    text-align: center;
-    vertical-align: middle;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-}
-
-.nc-table th, .nc-table-dark th {
-    height: 1.5em;
-    text-align: center;
-    vertical-align: middle;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+.nc-table th {
+  height: 1.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .nc-table-dark {
-    background-color: #2e3440;
-}
-
-.nc-table-prog {
-    width: 100%;
-    border: none;
-}
-
-.nc-table-prog td {
-    text-align: left;
-    vertical-align: top;
-    border: none;
+  background-color: <<color page-background>>;
 }
 
 .nc-table-raw {
-    border: none;
-    width: 100%;
+  border: none;
+  width: 100%;
 }
 
 .nc-table-raw td {
-    border: none;
+  border: none;
+}
+
+.nc-table-prog {
+  border: none;
+  width: 100%;
+}
+
+.nc-table-prog td {
+  border: none;
+  text-align: left;
+  vertical-align: top;
+}
+
+table a.tc-tiddlylink {
+  border: none;
+  color: <<color primary>>;
+  padding: none;
 }

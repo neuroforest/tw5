@@ -36,6 +36,8 @@ exports.nfRename = function(from, to) {
     return {"code": 500, "message": message};
   } else {
     var backlinks = $tw.wiki.filterTiddlers(`[[${from}]backlinks[]]`);
+    var tags = $tw.wiki.filterTiddlers(`[tag[${from}]]`);
+    var modified = new Set([...backlinks, ...tags]);
 
     // Rename tiddler
     $tw.wiki.renameTiddler(from, to);
@@ -64,9 +66,10 @@ exports.nfRename = function(from, to) {
       if (primary === from) {
         var newTiddler = new $tw.Tiddler(primaryTiddler.fields, {"neuro.primary": to});
         $tw.wiki.addTiddler(newTiddler);
+        modified.add(title);
       }
     })
-    return {"code": 204}
+    return {"code": 200, "message": `${modified.size} tiddlers affected`}
   }
 };
 
