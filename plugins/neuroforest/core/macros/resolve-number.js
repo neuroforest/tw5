@@ -14,7 +14,10 @@ Add decimal spaces to number
 
 exports.name = "resolve-number";
 
-exports.params = [];
+exports.params = [
+  {"name": "number"},
+  {"name": "keyword"}
+];
 
 exports.run = function(number, keyword) {
   var keywordTitle = $tw.utils.resolveKeyword(keyword);

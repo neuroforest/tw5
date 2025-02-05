@@ -11,7 +11,7 @@ type: text/vnd.tiddlywiki
 		  <$macrocall
 		    $name=toc-selective-expandable
 				tag=<<currentTiddler>>
-				sort="prefix[.bt-]!search:title[@]!search:title[#]sort[title]"
+				sort="prefix[.bt-]!search:title[@]!search:title[#]!tag[.b Excluded Taxons]!tag[.b Obsolete Taxons]sort[title]"
       />
 		</div>
 	  </td>

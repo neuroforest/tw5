@@ -3,9 +3,9 @@ title: $:/plugins/neuroforest/front/style/Codemirror
 type: text/vnd.tiddlywiki
 
 .cm-s-tiddlywiki div.CodeMirror-gutters {
-	background-color: <<color background>>;
-	padding-left: 0em;
-	padding-right: 0.4em;
+  background-color: <<color background>>;
+  padding-left: 0em;
+  padding-right: 0.4em;
 }
 
 .cm-s-tiddlywiki .CodeMirror-selected  {
@@ -18,5 +18,5 @@ type: text/vnd.tiddlywiki
 }
 
 div.CodeMirror {
-	font-size: 14pt;
+  font-size: 14pt;
 }

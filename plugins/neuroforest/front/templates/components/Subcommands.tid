@@ -2,4 +2,4 @@ title: $:/plugins/neuroforest/front/templates/Subcommands
 
 !!!''Subcommands''
 
-<$list template="$:/my/ui/list/unordered" filter="[prefix<currentTiddler>!title<currentTiddler>sort[title]]" />
+<$list template="$:/plugins/neuroforest/front/templates/UnorderedList" filter="[prefix<currentTiddler>!title<currentTiddler>sort[title]]" />

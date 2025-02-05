@@ -1,0 +1,7 @@
+title: $:/core/ui/SideBarSegments/site-subtitle
+
+<div class="tc-site-subtitle">
+
+<$transclude tiddler="$:/SiteSubtitle" mode="inline"/>
+
+</div>

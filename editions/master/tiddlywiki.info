@@ -26,7 +26,9 @@
         "tiddlywiki/highlight",
         "tiddlywiki/katex",
         "tiddlywiki/railroad",
-        "tiddlywiki/tiddlyweb"
+        "tiddlywiki/tiddlyweb",
+        "tobibeer/appear",
+        "tobibeer/preview"
     ],
     "themes": [
         "tiddlywiki/vanilla",

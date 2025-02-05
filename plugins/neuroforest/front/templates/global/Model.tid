@@ -1,0 +1,13 @@
+list-before: $:/plugins/tiddlywiki/comments/footer-view-template-segment
+tags: $:/tags/ViewTemplate
+title: $:/plugins/neuroforest/front/templates/Model
+
+<$list filter="[all[current]field:neuro.role[model]]" variable="current">
+<div class="nc-enhance">
+  Number of elements: ''<$count tag filter="[tag<current>sort[title]]"/>''
+</div>
+<$scrollable class="nc-scrollable nc-scrollable-index" style="padding:none;">
+{{||$:/plugins/neuroforest/front/templates/Tree}}
+</$scrollable>
+
+</$list>

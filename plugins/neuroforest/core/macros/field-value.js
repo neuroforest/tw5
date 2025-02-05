@@ -11,19 +11,21 @@ module-type: macro
 
 exports.name = "field-value";
 
-exports.params = [];
+exports.params = [
+  {"name": "title"},
+  {"name": "field"}
+];
 
 exports.run = function(title, field) {
   var tiddler, value;
   
-  tiddler = $tw.wiki.getTiddler(title);
+  tiddler = this.wiki.getTiddler(title);
   if (tiddler) {
     value = tiddler.fields[field];
     if (value) {
       return value;
     }
   }
-  return "";
 };
 
 })();

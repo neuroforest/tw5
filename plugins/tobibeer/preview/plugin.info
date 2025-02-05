@@ -7,6 +7,8 @@
     "source": "https://github.com/tobibeer/tw5-preview",
     "documentation": "https://tobibeer.github.io/tw5-preview",
     "plugin-type": "plugin",
-	"requires": "[[tobibeer/appear|http://tobibeer.github.io/tw5-plugins/#appear]]",
-	"list": "readme config"
+    "requires": "[[tobibeer/appear|http://tobibeer.github.io/tw5-plugins/#appear]]",
+    "list": "readme config",
+    "name": "Preview",
+    "stability": "STABILITY_2_STABLE"
 }

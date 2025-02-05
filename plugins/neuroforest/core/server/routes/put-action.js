@@ -15,7 +15,9 @@ exports.path = /^\/neuro\/action\/(.+)$/;
 
 exports.handler = function(request,response,state) {
   var action = state.params[0];
-  if (action === "merge") {
+  if (action === "close-all") {
+    var status = state.wiki.nfCloseAll(titles);
+  } else if (action === "merge") {
     var titles = state.queryParameters["titles"];
     var status = state.wiki.nfMerge(titles);
   } else if (action === "open") {

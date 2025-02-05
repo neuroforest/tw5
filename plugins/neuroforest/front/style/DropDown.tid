@@ -2,10 +2,10 @@ tags: $:/tags/Stylesheet
 title: $:/plugins/neuroforest/front/style/DropDown
 type: text/vnd.tiddlywiki
 
-div.tc-drop-down {
+div.tc-drop-down, span.tc-drop-down {
   border: 2px solid <<color muted-foreground>>;
   margin: 4px;
-	border-radius: 4px;
+  border-radius: 4px;
 }
 
 div.tc-drop-down a {
@@ -22,7 +22,7 @@ div.tc-drop-down button:hover svg .tc-fill-background {
 
 div.tc-search-drop-down, div.tc-block-dropdown {
   border: solid <<color muted-foreground>> 2px;
-	border-radius: 4px;
+  border-radius: 4px;
 }
 
 div.tc-search-drop-down em {

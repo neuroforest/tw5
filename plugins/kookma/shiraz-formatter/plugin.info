@@ -9,5 +9,6 @@
 	"list": "readme license history",
 	"plugin-type": "plugin",
 	"parent-plugin":"$:/plugins/kookma/shiraz",
-	"dependents": ""
+	"dependents": "",
+	"stability": "STABILITY_2_STABLE"
 }

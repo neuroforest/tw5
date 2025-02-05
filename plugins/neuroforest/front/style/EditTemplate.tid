@@ -25,21 +25,21 @@ div.tc-edit-add-tag button {
 
 table.tc-edit-fields input.tc-edit-texteditor {
   background-color: <<color background>>;
-	margin: 2px;
-	border: 1px solid <<color foreground>>;
-	border-radius: 2px;
-	padding: 1px 3px 1px 3px;
+  margin: 2px;
+  border: 1px solid <<color foreground>>;
+  border-radius: 2px;
+  padding: 1px 3px 1px 3px;
 }
 
 table.tc-edit-fields td.tc-edit-field-name {
   width: 20%;
-	white-space: nowrap;
+  white-space: nowrap;
   padding-left: 14px;
 }
 
 table.tc-edit-fields td.tc-edit-field-remove {
   text-align: center;
-	width: 4%;
+  width: 4%;
 }
 
 table.tc-edit-fields tr td {

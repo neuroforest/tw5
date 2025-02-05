@@ -8,5 +8,6 @@
     "source": "https://github.com/kookma/TW-Todolist",
     "list": "readme license history",
     "plugin-type": "plugin",
-    "dependents": ""
+    "dependents": "",
+    "stability": "STABILITY_2_STABLE"
 }
