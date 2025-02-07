@@ -39,6 +39,10 @@ exports.handler = function(request,response,state) {
   $tw.utils.each(titles, function(title) {
     var tiddler = state.wiki.getTiddler(title),
       tiddlerFields = {};
+    if (!tiddler) {
+      console.log("Tiddler not found:", title);
+      return;
+    }
     for (var i = 0, length = fields.length; i < length; i++) {
       var currentField = fields[i];
       if (currentField in tiddler.fields) {
