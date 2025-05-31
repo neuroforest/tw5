@@ -6,10 +6,7 @@ module-type: startup
 Favicon handling
 
 \*/
-(function(){
 
-/*jslint node: true, browser: true */
-/*global $tw: false */
 "use strict";
 
 // Export name and synchronous status
@@ -42,5 +39,3 @@ function setFavicon() {
 		}
 	}
 }
-
-})();
