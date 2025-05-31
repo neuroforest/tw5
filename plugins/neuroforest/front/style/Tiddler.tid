@@ -22,10 +22,6 @@ tr.nc-page-controls a.tc-tiddlylink:hover {
   color: <<color page-background>>;
 }
 
-div.nc-page-controls path {
-  fill: red;
-}
-
 div.tc-tags-wrapper {
   margin-bottom: 0px;
 }

@@ -234,13 +234,13 @@ exports.nfMerge = function(tiddlerTitles) {
     return tiddler;
   })
 
-  // Determine if all tiddler exist
+  // Determine if all tiddlers exist
   var invalidTiddlers = new Array();
   for (var i = 0; i < tiddlers.length; i++) {
     var title = tiddlerTitles[i];
     var tiddler = tiddlers[i];
     if (! tiddler) {
-    invalidTiddlers.push(title);
+      invalidTiddlers.push(title);
     }
   }
   if (invalidTiddlers.length) {

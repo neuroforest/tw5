@@ -9,7 +9,10 @@ module-type: macro
 
 exports.name = "pdf-link";
 
-exports.params = [];
+exports.params = [
+  {"name": "pdf"},
+  {"name": "page"}
+];
 
 exports.run = function(pdf, page) {
   console.log("RUNNING PDF-LINK.")

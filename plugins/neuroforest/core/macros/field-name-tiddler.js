@@ -11,7 +11,9 @@ module-type: macro
 
 exports.name = "field-name-tiddler";
 
-exports.params = [];
+exports.params = [
+  {"name": "field"}
+];
 
 exports.run = function(field) {
   var tiddlerMatch;

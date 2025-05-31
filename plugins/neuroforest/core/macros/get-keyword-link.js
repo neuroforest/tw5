@@ -14,7 +14,9 @@ Resolve neuro.keyword to provide its tiddler title
 
 exports.name = "get-keyword-link";
 
-exports.params = [];
+exports.params = [
+  {"name": "keyword"}
+];
 
 exports.run = function(keyword) {
   var keywordTitle = $tw.utils.resolveKeyword(keyword);

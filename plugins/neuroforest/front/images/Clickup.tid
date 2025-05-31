@@ -1,4 +1,0 @@
-tags: $:/tags/Image
-title: $:/plugins/neuroforest/front/images/Clickup
-
-<svg width="22pt" height="22pt" viewBox="0 0 128 128"><defs><linearGradient id="d" x1=".25906" x2="83.824" y1="212.6" y2="212.6" gradientTransform="scale(1.5441 .64764)" gradientUnits="userSpaceOnUse"><stop stop-color="#8930FD" offset="0"/><stop stop-color="#49CCF9" offset="1"/></linearGradient><linearGradient id="c" x1="2.5201" x2="99.58" y1="66.214" y2="66.214" gradientTransform="scale(1.2738 .78508)" gradientUnits="userSpaceOnUse"><stop stop-color="#FF02F0" offset="0"/><stop stop-color="#FFC800" offset="1"/></linearGradient></defs><g transform="matrix(.82666 0 0 .82666 10.337 -.13227)"><path d="m0.4 119.12 23.81-18.24c12.65 16.51 26.09 24.12 41.05 24.12 14.88 0 27.94-7.52 40.02-23.9l24.15 17.8c-17.43 23.62-39.09 36.1-64.17 36.1-25 0-46.87-12.4-64.86-35.88z" fill="url(#d)"/><path d="m65.18 39.84-42.38 36.52-19.59-22.72 62.06-53.48 61.57 53.52-19.68 22.64z" fill="url(#c)"/></g></svg>

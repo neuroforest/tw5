@@ -36,7 +36,7 @@ dropzone-background: <<color foreground>>
 external-link-background-hover: inherit
 external-link-background-visited: inherit
 external-link-background: inherit
-external-link-foreground-hover: inherit
+external-link-foreground-hover: #8fbcbb
 external-link-foreground-visited: <<color selection-background>>
 external-link-foreground: #8fbcbb
 foreground: #dadbe4

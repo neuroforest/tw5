@@ -2,6 +2,10 @@ tags: $:/tags/Stylesheet
 title: $:/plugins/neuroforest/front/style/SideBar
 type: text/vnd.tiddlywiki
 
+.nc-subtitle {
+  padding-left: 0.6em;
+}
+
 div.tc-sidebar-search input {
   border: 2px solid <<color foreground>>;
   border-radius: 4px;
@@ -9,7 +13,7 @@ div.tc-sidebar-search input {
   margin-bottom: 9px;
   margin-right: 8px;
   padding-left: 4px;
-  width: 264px;
+  width: 240px;
 }
 
 .tc-sidebar-tabs-main p button {

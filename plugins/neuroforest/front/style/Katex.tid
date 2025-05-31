@@ -9,7 +9,8 @@ type: text/vnd.tiddlywiki
 .katex-display {
   background-color: <<color page-background>>;
   border-radius: 0.5em;
-  overflow: hidden;
+  overflow-x: overlay;
+  overflow-y: hidden;
   padding: 0.5em;
 }
 

@@ -3,6 +3,6 @@ tags: $:/plugins/neuroforest/front/tags/NeuroBox
 title: $:/plugins/neuroforest/front/templates/Gene
 
 <$list filter="[all[current]fields[]prefix[gene.]]" variable=gene>
-  <$macrocall $name="get-keyword-link" keyword=<<gene>> />:
+<$macrocall $name="get-keyword-link" keyword=<<gene>> />:
 <$macrocall $name="field-to-link" title=<<currentTiddler>> field=<<gene>>  />
 </$list>
