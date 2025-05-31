@@ -2,10 +2,9 @@ tags: $:/tags/ViewTemplate
 title: $:/plugins/neuroforest/front/templates/global/Journal
 
 <$list filter="[all[current]field:neuro.role[journal]]" variable="journal">
-
   <$list filter="[prefix<currentTiddler>search:title[ #]]" variable="tiddler">
 
-  ---
+  <hr>
     <$set name="category" filter="[<tiddler>split[#]last[]]">
       <$set name="icon" tiddler=<<category>> field="icon">
         <h2><$link to=<<tiddler>>><<icon>></$link> ''<<category>>''</h2>
@@ -15,4 +14,33 @@ title: $:/plugins/neuroforest/front/templates/global/Journal
       </$set>
     </$set>
   </$list>
+  <$set name="date" filter="[<currentTiddler>search-replace:gi[-],[]]">
+    <$list filter="[search:created,modified<date>limit[1]]">
+      <hr>
+      <table class="nc-table-raw" style="width:100%;overflow:hidden;table-layout:fixed;">
+        <tr>
+          <td style="vertical-align:top;">
+            <$button class="tc-btn-invisible" popup=<<qualify "$:/temp/popup">> >
+              <h3>Created</h3>
+            </$button>
+            <$reveal type="nomatch" state=<<qualify "$:/temp/popup">> text="">
+
+              <$list filter="[search:created<date>!is[system]]" />
+
+            </$reveal>
+          </td>
+          <td style="vertical-align:top;">
+            <$button class="tc-btn-invisible" popup=<<qualify "$:/temp/popup">> >
+              <h3>Modified</h3>
+            </$button>
+            <$reveal type="nomatch" state=<<qualify "$:/temp/popup">> text="">
+
+              <$list filter="[search:modified<date>!is[system]]" />
+
+            </$reveal>
+          </td>
+        </tr>
+      </table>
+    </$list>
+  </$set>
 </$list>

@@ -1,0 +1,137 @@
+title: $:/palettes/NeuroLight
+name: NeuroForest Light
+color-scheme: light
+description: Neon and light.
+tags: $:/tags/Palette
+type: application/x-tiddler-dictionary
+
+alert-background: #ffe476
+alert-border: <<color alert-background>>
+alert-highlight: #881122
+alert-muted-foreground: <<color tab-background>>
+background: #ffffff
+blockquote-bar: <<color muted-foreground>>
+button-background: inherit
+button-foreground: <<color muted-foreground>>
+button-border: inherit
+code-background: inherit
+code-border: #inherit
+code-foreground: #dd1144
+diff-delete-background: #e35959
+diff-delete-foreground: <<color foreground>>
+diff-equal-background: inherit
+diff-equal-foreground: <<color foreground>>
+diff-insert-background: #aaefad
+diff-insert-foreground: <<colour foreground>>
+diff-invisible-background: inherit
+diff-invisible-foreground: <<colour muted-foreground>>
+dirty-indicator: <<color diff-delete-background>>
+download-background: <<color diff-insert-background>>
+download-foreground: <<color background>>
+dragger-background: <<colour foreground>>
+dragger-foreground: <<colour background>>
+dropdown-background: <<colour background>>
+dropdown-border: <<colour background>>
+dropdown-tab-background-selected: <<color tab-background-selected>>
+dropdown-tab-background: <<color tab-background>>
+dropzone-background: <<color foreground>>
+external-link-background-hover: inherit
+external-link-background-visited: inherit
+external-link-background: inherit
+external-link-foreground-hover: inherit
+external-link-foreground-visited: <<color selection-background>>
+external-link-foreground: #8fbcbb
+footnote-target-background: inherit
+foreground: #3b3939
+katex: #044066
+highlight-background: #7affe9
+highlight-foreground: #000000
+menubar-background: <<color message-background>>
+menubar-foreground: <<color tab-foreground>>
+message-background: #ecf2ff
+message-border: <<color message-background>>
+message-foreground: <<color foreground>>
+modal-backdrop: <<colour foreground>>
+modal-background: <<colour background>>
+modal-border: #999999
+modal-footer-background: <<color modal-border>>
+modal-footer-border: <<color modal-border>>
+modal-header-border: <<color modal-border>>
+muted-foreground: #737070
+network-activity-foreground: #448844
+notification-background: <<color primary>>
+notification-border: #999999
+page-background: #fcfbfa
+pre-background: #f5f5f5
+pre-border: #cccccc
+primary: #008591
+selection-background: #43827f
+selection-foreground: #ffffff
+select-tag-background: <<color modal-border>>
+select-tag-foreground: <<color foreground>>
+sidebar-button-foreground: <<colour foreground>>
+sidebar-controls-foreground-hover: <<color foreground>>
+sidebar-controls-foreground: <<color foreground>>
+sidebar-foreground-shadow: transparent
+sidebar-foreground: <<color foreground>>
+sidebar-muted-foreground-hover: <<color tab-background>>
+sidebar-muted-foreground: <<color muted-foreground>>
+sidebar-tab-background-selected: <<color tab-background-selected>>
+sidebar-tab-background: <<color tab-background>>
+sidebar-tab-border-selected: <<colour tab-border-selected>>
+sidebar-tab-border: <<colour tab-border>>
+sidebar-tab-divider: #e4e4e4
+sidebar-tab-foreground-selected:
+sidebar-tab-foreground: <<colour tab-foreground>>
+sidebar-tiddler-link-foreground-hover: <<color primary>>
+sidebar-tiddler-link-foreground: <<color primary>>
+site-title-foreground: <<colour tiddler-title-foreground>>
+stability-stable: #008000
+stability-experimental: #c07c00
+stability-deprecated: #ff0000
+stability-legacy: #0000ff
+static-alert-foreground: #aaaaaa
+tab-background-selected: #ffffff
+tab-background: #d8d8d8
+tab-border-selected: #d8d8d8
+tab-border: #cccccc
+tab-divider: #d8d8d8
+tab-foreground-selected: <<colour tab-foreground>>
+tab-foreground: #666666
+table-border: #dddddd
+table-footer-background: #a8a8a8
+table-header-background: #f0f0f0
+tag-background: #eecc66
+tag-foreground: #ffffff
+testcase-accent-level-1: #c1eaff
+testcase-accent-level-2: #E3B740
+testcase-accent-level-3: #5FD564
+tiddler-background: <<colour background>>
+tiddler-border: <<colour background>>
+tiddler-controls-foreground-hover: #888888
+tiddler-controls-foreground-selected: #444444
+tiddler-controls-foreground: <<color foreground>>
+tiddler-editor-background: #f8f8f8
+tiddler-editor-border-image: #ffffff
+tiddler-editor-border: #cccccc
+tiddler-editor-fields-even: #e0e8e0
+tiddler-editor-fields-odd: #f0f4f0
+tiddler-info-background: <<color page-background>>
+tiddler-info-border: <<color muted-foreground>>
+tiddler-info-tab-background: #f8f8f8
+tiddler-link-background: <<colour background>>
+tiddler-link-foreground: <<colour primary>>
+tiddler-subtitle-foreground: <<color foreground>>
+tiddler-title-foreground: <<color foreground>>
+toolbar-new-button:
+toolbar-options-button:
+toolbar-save-button:
+toolbar-info-button:
+toolbar-edit-button:
+toolbar-close-button:
+toolbar-delete-button:
+toolbar-cancel-button:
+toolbar-done-button:
+untagged-background: #999999
+very-muted-foreground: #888888
+wikilist-button-reveal: red

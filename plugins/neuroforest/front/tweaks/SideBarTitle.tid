@@ -1,4 +1,4 @@
 tags: $:/tags/SideBarSegment
 title: $:/core/ui/SideBarSegments/site-title
 
-<table class="nc-table-raw" style="margin:0;"><tr><td rowspan=2 style="width:8%;padding-left:0px;"><$image source="NeuroForest Icon" width="46em" height="46em"/></td><td><h1 class="tc-site-title"><$transclude tiddler="$:/SiteTitle" mode="inline"/></h1></td></tr><tr><td><$transclude tiddler="$:/SiteSubtitle"/></td></tr></table>
+<table class="nc-table-raw" style="margin:0;"><tr><td rowspan=2  style="width:8%;padding-left:0px;">{{$:/plugins/neuroforest/front/images/NeuroForest|36pt}}</td><td><h1 class="tc-site-title"><$transclude tiddler="$:/SiteTitle" mode="inline"/></h1></td></tr><tr><td class="nc-subtitle"><$transclude tiddler="$:/SiteSubtitle"/></td></tr></table>

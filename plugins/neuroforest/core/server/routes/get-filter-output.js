@@ -18,7 +18,6 @@ exports.path = /^\/neuro\/filter$/;
 
 exports.handler = function(request,response,state) {
   var filter = state.queryParameters.filter || "";
-  console.log(filter);
   if($tw.wiki.getTiddlerText("$:/config/Server/AllowAllExternalFilters") !== "yes") {
     if($tw.wiki.getTiddlerText("$:/config/Server/ExternalFilters/" + filter) !== "yes") {
       console.log("Blocked attempt to GET /recipes/default/tiddlers/tiddlers.json with filter: " + filter);
@@ -29,7 +28,6 @@ exports.handler = function(request,response,state) {
   }
   response.writeHead(200, {"Content-Type": "application/json"});
   var filterOutput = state.wiki.filterTiddlers(filter);
-  console.log(filterOutput);
   var text = JSON.stringify(filterOutput);
   response.end(text,"utf8");
 };

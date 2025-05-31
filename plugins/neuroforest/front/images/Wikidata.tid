@@ -1,4 +1,5 @@
 tags: $:/tags/Image
 title: $:/plugins/neuroforest/front/images/Wikidata
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" version="1.2" width="256" height="90"><path d="M120 545h30V45h-30v500zm60 0h90V45h-90v500zM300 45v500h90V45h-90z" style="fill:#900"/><path d="M840 545h30V45h-30v500zm60-500v500h30V45h-30zM420 545h30V45h-30v500zm60-500v500h30V45h-30z" style="fill:#396"/><path d="M540 545h90V45h-90v500zm120 0h30V45h-30v500zm60-500v500h90V45h-90z" style="fill:#069"/></svg>
+\parameters (size:"22pt")
+<svg width=<<size>> height=<<size>> viewBox="0 0 128 128"><g fill-rule="evenodd"><path d="M.067 103.506h4.74V24.494H.068Zm9.482 0H23.77V24.494H9.549Zm18.963-79.012v79.012h14.222V24.494Z" style="fill:#900;stroke-width:.158025"/><path d="M113.845 103.506h4.74V24.494h-4.74zm9.481-79.012v79.012h4.741V24.494Zm-75.851 79.012h4.74V24.494h-4.74zm9.481-79.012v79.012h4.74V24.494Z" style="fill:#396;stroke-width:.158025"/><path d="M66.437 103.506H80.66V24.494H66.437zm18.963 0h4.741V24.494h-4.74zm9.482-79.012v79.012h14.222V24.494Z" style="fill:#069;stroke-width:.158025"/></g></svg>

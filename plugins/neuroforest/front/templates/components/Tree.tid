@@ -1,6 +1,6 @@
 title: $:/plugins/neuroforest/front/templates/Tree
 
-<$set name="objects" value={{{ [<current>has[encoding]get[encoding]removeprefix[`]removesuffix[`]addsuffix[ Objects]] }}}>
+<$set name="objects" value={{{ [<current>has[encoding]get[encoding]removeprefix[`]removesuffix[`]addsuffix[ Objects]is[tiddler]] [<current>addsuffix[ Objects]is[tiddler]] }}}>
   <div class="tc-table-of-contents nc-tree">
     <$macrocall
       $name="toc-selective-expandable"
@@ -8,13 +8,15 @@ title: $:/plugins/neuroforest/front/templates/Tree
       sort="neuro:branch<current>sort[title]sort[custom-sort]"
     />
   </div>
-  <div class="tc-table-of-contents nc-tree">
-    <$macrocall
-      $name="toc-selective-expandable"
-      tag=<<objects>>
-      sort="sort[title]sort[custom-sort]"
-    />
-  </div>
+		<$list filter="[<objects>]">
+			<div class="tc-table-of-contents nc-tree">
+				<$macrocall
+					$name="toc-selective-expandable"
+					tag=<<object>>
+					sort="sort[title]sort[custom-sort]"
+				/>
+			</div>
+	</$list>
   <div class="tc-table-of-contents nc-tree">
     <$macrocall
       $name="toc-selective-expandable"

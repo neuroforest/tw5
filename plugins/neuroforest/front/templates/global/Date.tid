@@ -8,12 +8,12 @@ title: $:/plugins/neuroforest/front/templates/Date
 <tr><td>
 
 !!!''Journal''
-<$list filter="[tag[.sh Journal]prefix<current>sort[title]]" />
+<$list filter="[tag[JOURNAL]suffix<current>sort[title]]" />
 
 </td><td>
 
 !!!''History''
-<$list filter="[!tag[.sh Journal]prefix<current>!title<current>sort[title]]" />
+<$list filter="[!tag[JOURNAL]prefix<current>!title<current>sort[title]]" />
 
 </td><td>
 

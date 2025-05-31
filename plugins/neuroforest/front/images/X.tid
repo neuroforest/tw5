@@ -1,0 +1,5 @@
+tags: $:/tags/Image
+title: $:/plugins/neuroforest/front/images/X
+
+\parameters (size:"22pt")
+<svg width=<<size>> height=<<size>> viewBox="0 0 128 128"><g fill-rule="evenodd"><path d="M100.693 0h19.627L77.227 54.317 127.573 128H88.064L57.131 83.224 21.717 128H2.091l45.653-58.096L-.469 0h40.49l27.947 40.903zm-6.869 115.247h10.88L34.304 12.28h-11.69z"/></g></svg>

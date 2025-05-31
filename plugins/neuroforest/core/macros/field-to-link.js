@@ -10,14 +10,17 @@ module-type: macro
 
 exports.name = "field-to-link";
 
-exports.params = [];
+exports.params = [
+  {"name": "title"},
+  {"name": "field"}
+];
 
 /*
 Run the macro
 */
 exports.run = function(title, field) {
   var tiddler, fieldString, fieldTiddler, displayName, link;
-  
+
   tiddler = $tw.wiki.getTiddler(title);
   fieldString = tiddler.getFieldString(field);
   fieldTiddler = $tw.wiki.getTiddler(fieldString);

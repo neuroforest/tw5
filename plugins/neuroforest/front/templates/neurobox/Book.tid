@@ -1,0 +1,14 @@
+custom-sort: 20
+tags: $:/plugins/neuroforest/front/tags/NeuroBox
+title: $:/plugins/neuroforest/front/templates/Book
+
+<$list filter="[all[current]fields[]prefix[book.]] -[[book.year]] -[[book.current-page]] -[[book.current-paragraph]] -[[book.pages]]" variable=book>
+<$macrocall $name="get-keyword-link" keyword=<<book>> />:
+<$macrocall $name="field-to-link" title=<<currentTiddler>> field=<<book>>  /><br>
+</$list>
+
+<$list filter="[all[current]fields[]prefix[book.year]]" variable=book>
+<$set name="year" filter="[{!!book.year}addprefix[Year ]]">
+<$macrocall $name="get-keyword-link" keyword=<<book>> />: <<year>>
+</$set>
+</$list>

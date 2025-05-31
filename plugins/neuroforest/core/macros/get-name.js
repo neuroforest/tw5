@@ -9,7 +9,9 @@ module-type: macro
 
 exports.name = "get-name";
 
-exports.params = [];
+exports.params = [
+  {"name": "title"}
+];
 
 exports.run = function(title) {
   var tiddler = $tw.wiki.getTiddler(title);

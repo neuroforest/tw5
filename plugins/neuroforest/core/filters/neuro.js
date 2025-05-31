@@ -8,7 +8,7 @@ module-type: filteroperator
 "use strict";
   
 function getTaxonChain(title) {
-	var count;
+	var count, lastTiddler;
 	var tiddler = $tw.wiki.getTiddler(title);
 	var taxonChain = [];
 	while(true) {
@@ -16,7 +16,7 @@ function getTaxonChain(title) {
 		var primaryTiddler = $tw.wiki.getTiddler(primary);
 	  
 	  	// Reached the root of the taxon tree
-		if (primary === "ORGANISM") {
+		if (primary === "ORGANISMS") {
 			return taxonChain;
 		}
 	  	// Reached the root of them all
@@ -31,8 +31,7 @@ function getTaxonChain(title) {
 				+ title 
 			 	+ ", chain: "
 				+ taxonChain
-			 	+ ", broke at: "
-				+ "???"
+			 	+ ", broke at ???"
 			);
 			return taxonChain;
 		}
@@ -40,9 +39,9 @@ function getTaxonChain(title) {
 			taxonChain.push(primary);
 		}
 
-	  	tiddler = primaryTiddler;
+	  tiddler = primaryTiddler;
 	  
-		// Safety mechanis,
+		// Safety mechanism
 		if (count > 100) {
 			console.log("Infinite loop, breaking.");
 			return taxonChain;

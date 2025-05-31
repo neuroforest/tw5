@@ -1,0 +1,24 @@
+tags: $:/tags/Macro
+title: $:/plugins/neuroforest/front/macros/zotero
+
+\define zref(item-id, text:"REF", ss:"no")
+<$set name="item" filter="[[$item-id$]addprefix[zotero://select/library/items/]]">
+<$vars formatted-text={{{ [[$text$]addprefix[^^]addsuffix[^^]] }}}>
+<$vars output-text={{{ [[$ss$]match[yes]then<formatted-text>else[$text$]] }}}>
+<a class="nc-zotero-link" href=<<item>> title=<<item>>><<output-text>></a>
+</$vars>
+</$vars>
+</$set>
+\end
+
+\define zann(item-id, locator, text:"REF", ss:"yes")
+<$vars item={{{ [[$item-id$]addprefix[zotero://open-pdf/library/items/]] }}} locator={{{ [[$locator$]length[]match[8]then[?annotation=]else[?page=]addsuffix[$locator$]] }}}>
+<$vars zotero-link={{{ [<item>addsuffix<locator>] }}}>
+<$vars formatted-text={{{ [[$text$]addprefix[^^]addsuffix[^^]] }}}>
+<$vars output-text={{{ [[$ss$]match[yes]then<formatted-text>else[$text$]] }}}>
+<a class="nc-zotero-link" href=<<zotero-link>> title=<<zotero-link>>><<output-text>></a>
+</$vars>
+</$vars>
+</$vars>
+</$vars>
+\end
