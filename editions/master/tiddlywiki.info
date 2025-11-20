@@ -1,12 +1,8 @@
 {
     "description": ".mWiki",
     "plugins": [
-        "bimlas/highlight-searched-text",
-    	"felixhayashi/hotzone",
     	"hoelzro/tw-progress-bar",
         "kookma/shiraz",
-        "kookma/shiraz-callout",
-        "kookma/shiraz-formatter",
         "kookma/todolist",
         "kookma/commander",
         "neuroforest/core",
@@ -23,7 +19,7 @@
         "tiddlywiki/codemirror-mode-tiddlywiki5",
         "tiddlywiki/codemirror-mode-xml",
         "tiddlywiki/filesystem",
-        "tiddlywiki/highlight",
+        "tiddlywiki/highlight",        
         "tiddlywiki/katex",
         "tiddlywiki/railroad",
         "tiddlywiki/tiddlyweb",
