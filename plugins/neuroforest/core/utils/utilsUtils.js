@@ -90,4 +90,31 @@ exports.resolveKeyword = function(keyword) {
 };
 
 
+/*
+Generate UUID v4
+Source: https://github.com/felixhayashi/TW5-TiddlyMap
+*/
+exports.genUUID = function () {
+  const CHARS = "0123456789abcdefghijklmnopqrstuvwxyz".split("");
+  const uuid = [];
+  let rnd = 0, r;
+
+  for (let i = 0; i < 36; i++) {
+    if (i === 8 || i === 13 || i === 18 || i === 23) {
+      uuid[i] = "-";
+    } else if (i === 14) {
+      uuid[i] = "4";
+    } else {
+      if (rnd <= 0x02) {
+        rnd = (Math.random() * 0x100000000) | 0;
+      }
+      r = rnd & 0xf;
+      rnd >>= 4;
+      uuid[i] = CHARS[i === 19 ? (r & 0x3) | 0x8 : r];
+    }
+  }
+
+  return uuid.join("");
+};
+
 })();

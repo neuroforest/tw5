@@ -2,3 +2,9 @@ title: $:/config/EditorToolbarButtons/Visibility/$:
 
 /plugins/tiddlywiki/katex/ui/EditorToolbar/katex: hide
 /plugins/neuroforest/front/ui/EditorToolbar/Katex: show
+/core/ui/EditorToolbar/heading-1: hide
+/core/ui/EditorToolbar/heading-2: hide
+/core/ui/EditorToolbar/heading-3: hide
+/core/ui/EditorToolbar/list-bullet: hide
+/core/ui/EditorToolbar/list-number: hide
+/core/ui/EditorToolbar/strikethrough: hide

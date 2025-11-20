@@ -61,10 +61,10 @@ pre-border: <<color message-background>>
 primary: #7affe9
 select-tag-background: <<color modal-border>>
 select-tag-foreground: <<color foreground>>
-selection-background: #5e81ac
-selection-foreground: <<color foreground>>
+selection-background: #0f4d54
+selection-foreground: #ffffff
 sidebar-button-foreground: <<color foreground>>
-sidebar-controls-foreground-hover: <<color foreground>>
+sidebar-controls-foreground-hover: #ffffff
 sidebar-controls-foreground: <<color foreground>>
 sidebar-foreground-shadow: transparent
 sidebar-foreground: <<color foreground>>

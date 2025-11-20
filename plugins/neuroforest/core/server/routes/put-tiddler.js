@@ -28,16 +28,21 @@ exports.handler = function(request,response,state) {
 		delete fields.revision;
 	}
 
-	// Get current tiddler
-	var current = $tw.wiki.getTiddler("test")
-
-	state.wiki.addTiddler(new $tw.Tiddler(
-    $tw.wiki.getCreationFields(),
-    $tw.wiki.getTiddler(title),
-    fields,
-    {title: title},
-    $tw.wiki.getModificationFields()
-	));
+  // Add the tiddler to the wiki
+  if (state.queryParameters["preserve"] === "yes") {
+    state.wiki.addTiddler(new $tw.Tiddler(
+      fields,
+      {title: title}
+    ));
+  } else {
+    state.wiki.addTiddler(new $tw.Tiddler(
+      $tw.wiki.getCreationFields(),
+      $tw.wiki.getTiddler(title),
+      fields,
+      {title: title},
+      $tw.wiki.getModificationFields()
+	  ));
+	 }
 	var changeCount = state.wiki.getChangeCount(title).toString();
 	response.writeHead(204, "OK",{
 		"Content-Type": "text/plain"

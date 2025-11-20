@@ -28,7 +28,7 @@ exports.nfOpen = function(title) {
     return {"code": 500, "message": message};
   } else {
     let actions=`<$navigator story="$:/StoryList" history="$:/HistoryList"><$action-navigate $to="${title}"/></$navigator>`;
-    window.parent.$tw.rootWidget.invokeActionString(actions);
+    $tw.rootWidget.invokeActionString(actions);
     return {"code": 204}
   }
 };

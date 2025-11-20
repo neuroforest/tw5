@@ -65,8 +65,8 @@ page-background: #fcfbfa
 pre-background: #f5f5f5
 pre-border: #cccccc
 primary: #008591
-selection-background: #43827f
-selection-foreground: #ffffff
+selection-background: #a7e8e2
+selection-foreground: #000000
 select-tag-background: <<color modal-border>>
 select-tag-foreground: <<color foreground>>
 sidebar-button-foreground: <<colour foreground>>

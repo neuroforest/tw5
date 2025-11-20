@@ -10,8 +10,7 @@ description: {{$:/language/Buttons/Clone/Hint}}
   class=<<tv-config-toolbar-class>>
 >
   <$action-sendmessage $message="tm-new-tiddler"
-	  $param=<<currentTiddler>>
-	  neuro.id="" />
+	  $param=<<currentTiddler>> />
 	<%if [<tv-config-toolbar-icons>match[yes]] %>
 		{{$:/core/images/clone-button}}
 	<%endif%>

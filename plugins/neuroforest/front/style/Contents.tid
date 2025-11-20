@@ -7,8 +7,10 @@ type: text/vnd.tiddlywiki
 }
 
 .nc-page-controls svg {
-  height: 24px;
+  font-size: 1.5em;
+  height: 1em;
+  width: 1em;
+  margin-left: 0em;
   margin-right: 0.5em;
   margin-top: 0.5em;
-  width: 24px;
 }
