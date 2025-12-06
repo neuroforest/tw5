@@ -249,12 +249,30 @@ exports.nfMerge = function(tiddlerTitles) {
   }
 
   var tiddlerFields = new Object();
+  var oldestCreated = new Date();
   tiddlers.forEach(function(tiddlerNew) {
-    Object.assign(tiddlerFields, tiddlerNew.fields);
+    const newCreated = tiddlerNew.fields.created;
+    if (newCreated) {
+      if (newCreated < oldestCreated) {
+        oldestCreated = newCreated;
+      }
+    }
+    for (const fieldName in tiddlerNew.fields) {
+      const fieldValue = tiddlerNew.fields[fieldName];
+      if (fieldName === "created") {
+        continue;
+      }
+      if (fieldValue === "") {
+        continue;
+      }
+      // Default merge: ascending order (last tiddler wins with non-empty value)
+      tiddlerFields[fieldName] = fieldValue;
+    }
   })
 
-  var targetTitle = tiddlerFields.title;
+  tiddlerFields.created = oldestCreated;
 
+  var targetTitle = tiddlerFields.title;
   tiddlers.forEach(function(tiddlerNew) {
     $tw.wiki.relinkTiddler(tiddlerNew.fields.title, targetTitle);
     $tw.wiki.deleteTiddler(tiddlerNew.fields.title);
