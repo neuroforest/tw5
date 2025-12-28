@@ -1,5 +1,5 @@
 tags: $:/tags/Stylesheet
-title: $:/plugins/neuroforest/front/style/Tiddler
+title: $:/plugins/neuroforest/front/style/ViewTemplate
 type: text/vnd.tiddlywiki
 
 .tc-quote {
@@ -16,10 +16,6 @@ type: text/vnd.tiddlywiki
 
 .tc-view-field-table > tbody > tr > :nth-child(2) {
   overflow-wrap: anywhere;
-}
-
-tr.nc-page-controls a.tc-tiddlylink:hover {
-  color: <<color page-background>>;
 }
 
 div.tc-tags-wrapper {
@@ -58,4 +54,36 @@ span.nc-tiddler-title-icon {
 
 span.tc-tag-label {
   border-radius: 0.4em !important;
+}
+
+a.tc-tiddlylink-external {
+  text-decoration: none;
+}
+
+a.tc-tiddlylink-external:hover {
+  text-decoration: underline;
+}
+
+div.tc-tiddler-edit-frame {
+  padding: 1.5em;
+}
+
+.tc-subtitle {
+  display: flex;
+  height: 2em;
+}
+
+.tc-subtitle span.tc-tag-label {
+  color: white;
+}
+
+.nc-color {
+  align-items: center;
+  border-radius:8px;
+  display: flex;
+  padding: 0.7em;
+  height:1em;
+  margin: 0;
+  vertical-align:middle;
+  width: 1.6em;
 }

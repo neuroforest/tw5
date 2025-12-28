@@ -3,14 +3,11 @@ title: $:/plugins/neuroforest/neo4j-syncadaptor/neo4jsyncadaptor.js
 type: application/javascript
 module-type: syncadaptor
 
-A sync adaptor module for synchronising TiddlyWiki tiddlers with a Neo4j database using the node.js driver.
-This implementation strictly follows the TiddlyWiki SyncAdaptorModules specification.
-
+A sync adaptor module for synchronising Tiddlywiki5 node.js server with a Neo4j database.
 \*/
 
 "use strict";
 
-// Get a reference to the Neo4j driver
 const neo4jDriver = $tw.node ? require("neo4j-driver") : null;
 
 // Helper to convert an async Promise to a TiddlyWiki callback style (err, result)
@@ -19,11 +16,11 @@ function promiseToCallback(promise, callback) {
     .catch(error => callback(error));
 }
 
+// Create Neo4j adaptor
 function Neo4jAdaptor(options) {
 	var self = this;
 	this.wiki = options.wiki;
 	this.logger = new $tw.utils.Logger("neo4j", {colour: "blue"});
-  this.mark = new $tw.utils.Logger("neo4j", {colour: "red"});
     
   // Internal state tracking
   this.driver = null;
@@ -34,18 +31,16 @@ function Neo4jAdaptor(options) {
   this.user = this.wiki.getTiddlerText("$:/config/Neo4j/User", process.env.NEO4J_USER);
   this.password = this.wiki.getTiddlerText("$:/config/Neo4j/Password", process.env.NEO4J_PASSWORD);
   
+  // Asynchronously connect to the database upon adaptor creation
   if ($tw.node && neo4jDriver) {
-    // Asynchronously connect to the database upon adaptor creation
     this.connect().catch(err => {
       self.logger.log("Initial Neo4j connection failed: " + err.message);
     });
   }
 }
 
-// --- Basic Adaptor Metadata ---
+// Basic adaptor metadata
 Neo4jAdaptor.prototype.name = "neo4j";
-
-// We set this to false. The adaptor will query all updated tiddlers via getUpdatedTiddlers.
 Neo4jAdaptor.prototype.supportsLazyLoading = false;
 
 // --- Connection and Readiness ---
@@ -54,7 +49,6 @@ Neo4jAdaptor.prototype.supportsLazyLoading = false;
 Neo4jAdaptor.prototype.connect = async function() {
   this.logger.log("Attempting to connect to Neo4j at " + this.uri);
 
-  // Create the Driver instance
   this.driver = neo4jDriver.driver(
     this.uri,
     neo4jDriver.auth.basic(this.user, this.password)
@@ -88,25 +82,20 @@ Neo4jAdaptor.prototype.getSession = function() {
   if (!this.driver) {
     throw new Error("Neo4j driver is not available or not connected.");
   }
-  // Using default database, adjust if necessary
   return this.driver.session({ database: "neo4j" });
 };
-
-// --- Tiddler Info (for tracking) ---
 
 /*
 getTiddlerInfo returns the adaptor-specific metadata stored with the tiddler.
 This is used by the syncer to track external revisions.
-We simply retrieve the existing 'adaptorInfo' field.
 */
 Neo4jAdaptor.prototype.getTiddlerInfo = function(tiddler) {
-  // Returns the existing adaptorInfo for the tiddler, or null/undefined
-	return tiddler.fields.title;
-};
+	return {
+		bag: tiddler.fields.bag
+		}
+  };
 
-// getTiddlerFileInfo is not required by the standard spec and is irrelevant for a DB adaptor.
-
-// --- Saving a Tiddler ---
+// -- Neo4j Database Operations --
 
 /*
 Save a tiddler and invoke the callback with (err, adaptorInfo, revision)
@@ -127,22 +116,22 @@ Neo4jAdaptor.prototype.saveTiddler = function(tiddler, callback, options) {
   // Cypher: MERGE on title, update all properties, and set a new 'modified' timestamp
   var now = new Date().toISOString();
   const cypherQuery = `
-    MERGE (n:Object {title: $title})
+    MERGE (o:Object {title: $title})
     ON CREATE SET
-      n += $fields,
-      n.created = $now,
-      n.modified = $now
+      o = $fields,
+      o.created = $now,
+      o.modified = $now
     ON MATCH SET
-      n += $fields,
-      n.modified = $now
-    RETURN n.modified AS modified, elementId(n) AS neo4jId
+      o = {},
+      o += $fields,
+      o.modified = $now
+    RETURN o.modified AS modified, elementId(o) AS neo4jId;
   `;
 
   function buildQueryString(query, params) {
     let finalQuery = query;
     for (const key in params) {
       const value = typeof params[key] === 'object' ? JSON.stringify(params[key]) : params[key];
-      // Simple replace; assumes parameter names start with $
       finalQuery = finalQuery.replace(new RegExp(`\\$${key}`, 'g'), value);
     }
     return finalQuery;
@@ -160,13 +149,12 @@ Neo4jAdaptor.prototype.saveTiddler = function(tiddler, callback, options) {
       if (result.records.length === 0) {
         throw new Error("Failed to retrieve new adaptor info after save.");
       }
-
-      // Extract new adaptor info and revision
+      // Extract new adaptor info
       const record = result.records[0];
-      const modified = Number(record.get("modified")); // Use toNumber() for compatibility
+      const modified = Number(record.get("modified"));
       const neo4jId = Number(record.get("neo4jId"));
 
-      // Return adaptorInfo and the revision number (timestamp)
+      // Return adaptorInfo
       return [neo4jId, modified];
     })
     .catch(err => {
@@ -177,8 +165,6 @@ Neo4jAdaptor.prototype.saveTiddler = function(tiddler, callback, options) {
     callback
   );
 };
-
-// --- Deleting a Tiddler ---
 
 /*
 Delete a tiddler and invoke the callback with (err)
@@ -193,9 +179,9 @@ Neo4jAdaptor.prototype.deleteTiddler = function(title, callback, options) {
 
   // Delete the Tiddler node and all its relationships
   const cypherQuery = `
-    MATCH (n:Object {title: $title})
-    DETACH DELETE n
-    RETURN count(n) AS deletedCount
+    MATCH (o:Object {title: $title})
+    DETACH DELETE o
+    RETURN count(o) AS deletedCount;
   `;
 
   const runTransaction = session.run(cypherQuery, { title: title });
@@ -203,13 +189,10 @@ Neo4jAdaptor.prototype.deleteTiddler = function(title, callback, options) {
   promiseToCallback(
     runTransaction.then(result => {
       session.close();
-      const deletedCount = result.records[0].get("deletedCount").toNumber();
-
+      const deletedCount = Number(result.records[0].get("deletedCount"));
       if (deletedCount === 0) {
        self.logger.log(`Tiddler "${title}" not found in Neo4j (already deleted).`);
       }
-
-      // TiddlyWiki expects a null adaptorInfo on successful deletion
       return null;
     })
     .catch(err => {
@@ -220,7 +203,6 @@ Neo4jAdaptor.prototype.deleteTiddler = function(title, callback, options) {
     callback
   );
 };
-
 
 // --- TiddlyWiki required export ---
 if(neo4jDriver) {

@@ -1,0 +1,47 @@
+tags: $:/tags/Global
+title: $:/plugins/neuroforest/front/widgets/Expandable
+
+\widget $nf.expandable-body(root, name, path)
+<$qualify name="nf-expandable-state" title={{{ [[$:/state/nf]addsuffix<path>addsuffix[-]addsuffix<currentTiddler>] }}}>
+
+  <$reveal type="nomatch" stateTitle=<<nf-expandable-state>> text="open">
+    <h3>
+      <$button setTitle=<<nf-expandable-state>> setTo="open" class="tc-btn-invisible tc-popup-keep">
+        <$transclude tiddler=<<toc-closed-icon>> />
+      </$button>
+      <<name>>
+    </h3>
+  </$reveal>
+  <$reveal type="match" stateTitle=<<nf-expandable-state>> text="open" tag="div">
+    <div>
+      <$button setTitle=<<nf-expandable-state>> setTo="close" class="tc-btn-invisible tc-popup-keep">
+        <$transclude tiddler=<<toc-open-icon>> />
+      </$button>
+      <<name>>
+    </div>
+    <div class="nc-expandable">
+    <$transclude field="text" mode="block"/>
+    <$nf.expandable root=<<root>> />
+    </div>
+  </$reveal>
+  <$reveal type="match" stateTitle=<<nf-expandable-state>> text="open">
+    <$macrocall $name="toc-selective-expandable" tag=<<currentTiddler>> sort=<<__sort__>> itemClassFilter=<<__itemClassFilter__>> exclude=<<__exclude__>> path=<<__path__>>/>
+  </$reveal>
+</$qualify>
+\end $nf.expandable-body
+
+\widget $nf.expandable(root, sort:"", exclude:"", path:"")
+<$let
+  currentRoot={{{ [<root>is[blank]then<currentTiddler>else<root>] }}}
+  prefix={{{ [<currentRoot>addsuffix[ #]] }}}
+  newPath={{{ [<path>addsuffix[/]addsuffix<currentRoot>] }}}
+>
+  <div>
+    <$list filter="""[all[shadows+tiddlers]prefix<prefix>removeprefix<prefix>!regexp[\s#]addprefix<prefix>]""">
+      <$let name={{{ [all[current]removeprefix<currentRoot>removeprefix[ #]] }}}>
+        <$nf.expandable-body root=<<currentTiddler>> name=<<name>> />
+      </$let>
+    </$list>
+  </div>
+</$let>
+\end $nf.expandable

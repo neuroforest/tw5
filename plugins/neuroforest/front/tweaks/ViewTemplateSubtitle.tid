@@ -2,9 +2,16 @@ title: $:/core/ui/ViewTemplate/subtitle
 tags: $:/tags/ViewTemplate
 
 \whitespace trim
-<$reveal type="nomatch" stateTitle=<<folded-state>> text="hide" tag="div" retain="yes" animate="yes">
+<$set name="style" filter="[<currentTiddler>get[color]addprefix[background-color:]]">
+<$reveal style="display:flex;justify-content:space-between;" type="nomatch" stateTitle=<<folded-state>> text="hide" tag="div" retain="yes" animate="yes">
 <div class="tc-subtitle">
 <$link to={{!!creator}} />&nbsp;
 <$view field="created" format="date" template={{$:/language/Tiddler/DateFormat}}/>
 </div>
+<div style="display:flex;">
+<div class="nc-color" style=<<style>>></div>
+<div style="margin: 0em 1em;">{{!!neuro.id}}</div>
+<div class="nc-color" style=<<style>>></div>
+</div>
 </$reveal>
+</$set>

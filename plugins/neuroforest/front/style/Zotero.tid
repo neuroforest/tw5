@@ -1,0 +1,11 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/neuroforest/front/style/Zotero.tid
+type: text/vnd.tiddlywiki
+
+a.nc-zotero-link {
+  color: <<color zotero-link>>;
+}
+
+a.nc-zotero-link:hover {
+  text-decoration: underline;
+}

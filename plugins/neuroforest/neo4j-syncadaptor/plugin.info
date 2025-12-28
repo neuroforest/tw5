@@ -1,8 +1,8 @@
 {
 	"title": "$:/plugins/neuroforest/neo4j-syncadaptor",
 	"description": "Synchronize changes from the node.js server to the Neo4j database",
-	"list": "readme",
 	"name": "Neo4j sync adaptor",
 	"source": "https://github.com/neuroforest/tw5-plugins.git",
+	"stability": "STABILITY_2_STABLE",
 	"version": "1.0.0"
 }

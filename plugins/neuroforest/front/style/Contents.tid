@@ -14,3 +14,7 @@ type: text/vnd.tiddlywiki
   margin-right: 0.5em;
   margin-top: 0.5em;
 }
+
+tr.nc-page-controls a.tc-tiddlylink:hover {
+  color: <<color page-background>>;
+}

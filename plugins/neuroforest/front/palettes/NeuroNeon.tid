@@ -11,7 +11,8 @@ alert-highlight: #b48ead
 alert-muted-foreground: <<color tab-background>>
 background: #242830
 blockquote-bar: <<color muted-foreground>>
-button-foreground: <<color page-background>>
+button-background: <<color modal-border>>
+button-foreground: <<color strong-foreground>>
 code-background: inherit
 code-border: inherit
 code-foreground: #fcd2d6
@@ -123,6 +124,7 @@ toolbar-cancel-button: inherit
 toolbar-done-button: inherit
 untagged-background: #2d3038
 very-muted-foreground: <<color untagged-background>>
+zotero-link: #e0a87e
 wikilist-background: <<color page-background>>
 wikilist-toolbar-background: <<color background>>
 wikilist-item: <<color background>>

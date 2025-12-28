@@ -9,6 +9,7 @@
         "neuroforest/front",
         "neuroforest/neo4j-syncadaptor",
         "tiddlywiki/codemirror",
+        "tiddlywiki/codemirror-autocomplete",
         "tiddlywiki/codemirror-closetag",
         "tiddlywiki/codemirror-closebrackets",
         "tiddlywiki/codemirror-mode-css",
@@ -26,9 +27,10 @@
         "tobibeer/preview"
     ],
     "themes": [
+        "neuroforest/basic",
+        "neuroforest/mobile",
         "tiddlywiki/vanilla",
-        "tiddlywiki/snowwhite",
-        "neuroforest/basic"
+        "tiddlywiki/snowwhite"
     ],
     "build": {
         "index": [

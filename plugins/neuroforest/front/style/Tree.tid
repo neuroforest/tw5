@@ -11,3 +11,13 @@ type: text/vnd.tiddlywiki
 .nc-tree a {
   border-radius: 6px;
 }
+
+.nc-tree:has(li) {
+  padding: 0.5em 0.5em ;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.nc-tree ol {
+  margin: 0;
+}

@@ -1,0 +1,8 @@
+{
+	"title": "$:/themes/neuroforest/mobile",
+	"name": "NeuroForest Mobile",
+	"core-version": ">=5.0.0",
+	"plugin-type": "theme",
+	"description": "Mobile NeuroForest theme",
+	"plugin-priority": "0"
+}

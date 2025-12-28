@@ -32,3 +32,7 @@ type: text/vnd.tiddlywiki
   margin-bottom: 17px;
   margin-top: 0px;
 }
+
+p:has(div.nc-scrollable) {
+  overflow-x: initial;
+}

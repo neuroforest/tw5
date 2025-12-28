@@ -15,10 +15,6 @@ div.tc-editor-toolbar button {
   color: <<color foreground>>;
 }
 
-div.tc-tiddler-edit-frame .tc-edit {
-  color: <<color foreground>>;
-}
-
 div.tc-edit-add-tag button {
   margin: 0px 4px 0px 4px;
 }
@@ -43,5 +39,35 @@ table.tc-edit-fields td.tc-edit-field-remove {
 }
 
 table.tc-edit-fields tr td {
-  padding: 0px 4px 0px 4px;
+  padding: 2px;
+}
+
+span.tc-edit-field-add-button {
+  width: auto;
+}
+
+div.tc-edit-field-add-name-wrapper input.tc-edit-texteditor {
+  width: 150px;
+}
+
+span.tc-edit-field-add-value {
+  width: 50%;
+}
+
+.tc-edit-type-selector-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6em;
+}
+
+div.tc-type-selector-dropdown-wrapper {
+  min-width: calc(30ch + 4em);
+}
+
+div.tc-type-selector-dropdown-wrapper input.tc-edit-typeeditor {
+  min-width: 30ch;
+}
+
+.nc-neuro-id {
+  color: <<color muted-foreground>>;
 }
