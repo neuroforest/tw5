@@ -448,7 +448,7 @@ a.tc-tiddlylink-missing {
 }
 
 a.tc-tiddlylink-external {
-	text-decoration: underline;
+	text-decoration: none;
 	color: <<colour external-link-foreground>>;
 	background-color: <<colour external-link-background>>;
 }

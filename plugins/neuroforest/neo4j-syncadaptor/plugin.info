@@ -4,5 +4,5 @@
 	"name": "Neo4j sync adaptor",
 	"source": "https://github.com/neuroforest/tw5-plugins.git",
 	"stability": "STABILITY_2_STABLE",
-	"version": "1.0.0"
+	"version": "1.0.2"
 }

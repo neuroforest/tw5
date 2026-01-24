@@ -1,9 +1,9 @@
 /*\
-title: $:/plugins/neuroforest/core/server/routes/get-filter-output.js
+title: $:/plugins/neuroforest/core/server/routes/delete-by-filter.js
 type: application/javascript
 module-type: route
 
-GET /neuro/filter?filter=<filter>
+DELETE /neuro?filter=<filter>
 
 \*/
 (function() {
@@ -12,24 +12,26 @@ GET /neuro/filter?filter=<filter>
 /*global $tw: false */
 "use strict";
 
-exports.method = "GET";
+exports.method = "DELETE";
 
-exports.path = /^\/neuro\/filter$/;
+exports.path = /^\/neuro$/;
 
 exports.handler = function(request,response,state) {
   var filter = state.queryParameters.filter || "";
   if($tw.wiki.getTiddlerText("$:/config/Server/AllowAllExternalFilters") !== "yes") {
     if($tw.wiki.getTiddlerText("$:/config/Server/ExternalFilters/" + filter) !== "yes") {
-      console.log("Blocked attempt to GET /neuro/filter with filter: " + filter);
+      console.log("Blocked attempt to DELETE /neuro by filter: " + filter);
       response.writeHead(403);
       response.end();
       return;
     }
   }
-  response.writeHead(200, {"Content-Type": "application/json"});
   var filterOutput = state.wiki.filterTiddlers(filter);
-  var text = JSON.stringify(filterOutput);
-  response.end(text,"utf8");
+  for (var i = 0; i < filterOutput.length; i++) {
+      state.wiki.deleteTiddler(filterOutput[i]);
+  }
+  response.writeHead(204);
+  response.end("utf8");
 };
 
 }());

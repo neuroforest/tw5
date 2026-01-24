@@ -33,13 +33,13 @@ exports.nfOpen = function(title) {
   }
 };
   
-exports.nfRename = function(from, to) {
+exports.nfRename = function(from, to, force=false) {
   var tiddler = $tw.wiki.getTiddler(from);
   if (! tiddler) {
     var message = `Tiddler '${from}' does not exist.`;
     console.log(message);
     return {"code": 500, "message": message};
-  } else if ($tw.wiki.getTiddler(to)) {
+  } else if (($tw.wiki.getTiddler(to)) && !force) {
     var message = `Target tiddler '${to}' already exists.`;
     console.log(message);
     return {"code": 500, "message": message};
@@ -95,7 +95,6 @@ exports.nfRecode = function (from, to) {
     $tw.wiki.nfRename(title, newTitle);
     // TODO: handle encoding
   })
-  
 };
 
 exports.nfAddFields = function(filter, newFields) {
@@ -184,7 +183,6 @@ exports.nfReplace = function(oldText, newText, filter) {
       } else if (typeof tiddler.fields[field] === "string") {
         var newValue = tiddler.fields[field].split(oldText).join(newText);
       } else {
-        console.log(tiddler.fields[field]);
         continue;
       }
       if (newValue !== tiddler.fields[field]) {
@@ -274,8 +272,7 @@ exports.nfMerge = function(tiddlerTitles) {
 
   var targetTitle = tiddlerFields.title;
   tiddlers.forEach(function(tiddlerNew) {
-    $tw.wiki.relinkTiddler(tiddlerNew.fields.title, targetTitle);
-    $tw.wiki.deleteTiddler(tiddlerNew.fields.title);
+    $tw.wiki.nfRename(tiddlerNew.fields.title, targetTitle, true);
   })
 
   $tw.wiki.addTiddler(new $tw.Tiddler(tiddlerFields));
@@ -298,6 +295,28 @@ exports.nfSearch = function(query) {
 
   $tw.wiki.addTiddler({title: "$:/temp/search/input", text: query});
 
+  return {"code": 204};
+}
+
+exports.nfLoad = function(title) {
+  console.log("Loading tiddler:", title);
+  $tw.syncer.syncadaptor.loadTiddler(title, function(err, fields) {
+    if (fields) {
+      $tw.wiki.addTiddler(new $tw.Tiddler(
+      $tw.wiki.getCreationFields(),
+      fields));
+    }
+  });
+  return {"code": 204};
+}
+
+exports.nfRender= function(tiddler) {
+  console.log("Rendering tiddler:", tiddler);
+  $tw.wiki.addTiddler(new $tw.Tiddler(
+    $tw.wiki.getCreationFields(),
+    tiddler,
+    {"temp": "1"},
+    $tw.wiki.getModificationFields()));
   return {"code": 204};
 }
 

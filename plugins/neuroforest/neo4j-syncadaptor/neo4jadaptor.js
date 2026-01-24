@@ -116,16 +116,17 @@ Neo4jAdaptor.prototype.saveTiddler = function(tiddler, callback, options) {
   // Cypher: MERGE on title, update all properties, and set a new 'modified' timestamp
   var now = new Date().toISOString();
   const cypherQuery = `
-    MERGE (o:Object {title: $title})
+    MERGE (t:Tiddler {title: $title})
     ON CREATE SET
-      o = $fields,
-      o.created = $now,
-      o.modified = $now
+      t = $fields,
+      t.created = datetime($created),
+      t.modified = datetime($modified)
     ON MATCH SET
-      o = {},
-      o += $fields,
-      o.modified = $now
-    RETURN o.modified AS modified, elementId(o) AS neo4jId;
+      t = {},
+      t += $fields,
+      t.created = datetime($created),
+      t.modified = datetime($modified)
+    RETURN t.modified AS modified, elementId(t) AS neo4jId;
   `;
 
   function buildQueryString(query, params) {
@@ -138,7 +139,8 @@ Neo4jAdaptor.prototype.saveTiddler = function(tiddler, callback, options) {
   }
 
   const runTransaction = session.run(cypherQuery, {
-    now: now,
+    created: tiddlerFields.created ?? now,
+    modified: tiddlerFields.modified ?? now,
     title: title,
     fields: tiddlerFields
   });
@@ -179,9 +181,9 @@ Neo4jAdaptor.prototype.deleteTiddler = function(title, callback, options) {
 
   // Delete the Tiddler node and all its relationships
   const cypherQuery = `
-    MATCH (o:Object {title: $title})
-    DETACH DELETE o
-    RETURN count(o) AS deletedCount;
+    MATCH (t:Tiddler {title: $title})
+    DETACH DELETE t
+    RETURN count(t) AS deletedCount;
   `;
 
   const runTransaction = session.run(cypherQuery, { title: title });
@@ -199,6 +201,42 @@ Neo4jAdaptor.prototype.deleteTiddler = function(title, callback, options) {
       session.close();
       self.logger.log(`Error deleting tiddler "${title}": ${err.message}`);
       throw err;
+    }),
+    callback
+  );
+};
+
+/*
+Load a tiddler from Neo4j and invoke the callback with (err, tiddlerFields)
+*/
+Neo4jAdaptor.prototype.loadTiddler = function(title, callback) {
+  var self = this;
+  var session = this.getSession();
+
+  const cypherQuery = `
+    MATCH (t:Tiddler {title: $title})
+    RETURN properties(t) AS fields;
+   `;
+
+  const runTransaction = session.run(cypherQuery, { title: title });
+
+  promiseToCallback(
+    runTransaction.then(result => {
+      session.close();
+      if (result.records.length > 0) {
+        var fields = result.records[0].get("fields");
+        fields.created = new Date(fields.created);
+        fields.modified = new Date(fields.modified);
+        callback(null, fields);
+      } else {
+        self.logger.log(`Tiddler "${title}" not found in Neo4j.`);
+        callback(null, null);
+      }
+    })
+    .catch(function(err) {
+      session.close();
+      self.logger.log("Error loading tiddler: " + title, err);
+      callback(err);
     }),
     callback
   );

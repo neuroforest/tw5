@@ -50,7 +50,7 @@ exports.getName = function() {
   
 /* Get the neuro code of a tiddler */
 exports.getCode = function() {
-  var code = this.fields["code"]; 
+  var code = this.fields["neuro.code"];
   if (code) {
     return code;
   }
